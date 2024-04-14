@@ -7,12 +7,13 @@ use crate::state::Gameplay;
 use crate::utils::smooth_damp_vec3;
 
 #[derive(Component, Reflect, Clone)]
-#[reflect(Component)]
+#[reflect(Component, Default)]
 pub struct CameraTarget {
     speed: f32,
     smooth: f32,
     angle: f32,
     distance: f32,
+    orbit: f32,
     #[reflect(ignore)]
     velocity: f32,
 }
@@ -25,6 +26,7 @@ impl Default for CameraTarget {
             angle: 60.0,
             distance: 20.0,
             velocity: 0.0,
+            orbit: 0.0,
         }
     }
 }
@@ -34,14 +36,16 @@ fn target_camera(
     mut cameras: Query<(&Camera, &mut Transform), Without<CameraTarget>>,
     time: Res<Time>,
 ) {
+    let elapsed = time.elapsed_seconds();
     for (mut target, target_trans) in targets.iter_mut() {
         for (camera, mut camera_trans) in cameras.iter_mut() {
             if camera.is_active {
                 let rad = target.angle * PI / 180.0;
+                let orbit = target.orbit * elapsed;
                 let dir = Vec3::new(
-                    0.0,
+                    target.distance * rad.cos() * orbit.cos(),
                     target.distance * rad.sin(),
-                    target.distance * rad.cos(),
+                    target.distance * rad.cos() * orbit.sin(),
                 );
                 let (pos, vel) = smooth_damp_vec3(
                     camera_trans.translation,
