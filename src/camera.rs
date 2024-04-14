@@ -3,7 +3,7 @@ use std::f32::consts::PI;
 use bevy::prelude::*;
 use space_editor::prelude::*;
 
-use crate::state::Gameplay;
+use crate::level::Gameplay;
 use crate::utils::smooth_damp_vec3;
 
 #[derive(Component, Reflect, Clone)]
@@ -14,6 +14,7 @@ pub struct CameraTarget {
     angle: f32,
     distance: f32,
     orbit: f32,
+    orbit_angle: f32,
     #[reflect(ignore)]
     velocity: f32,
 }
@@ -27,6 +28,7 @@ impl Default for CameraTarget {
             distance: 20.0,
             velocity: 0.0,
             orbit: 0.0,
+            orbit_angle: 0.0,
         }
     }
 }
@@ -36,16 +38,15 @@ fn target_camera(
     mut cameras: Query<(&Camera, &mut Transform), Without<CameraTarget>>,
     time: Res<Time>,
 ) {
-    let elapsed = time.elapsed_seconds();
     for (mut target, target_trans) in targets.iter_mut() {
+        target.orbit_angle += target.orbit * time.delta_seconds();
         for (camera, mut camera_trans) in cameras.iter_mut() {
             if camera.is_active {
                 let rad = target.angle * PI / 180.0;
-                let orbit = target.orbit * elapsed;
                 let dir = Vec3::new(
-                    target.distance * rad.cos() * orbit.cos(),
+                    target.distance * rad.cos() * target.orbit_angle.cos(),
                     target.distance * rad.sin(),
-                    target.distance * rad.cos() * orbit.sin(),
+                    target.distance * rad.cos() * target.orbit_angle.sin(),
                 );
                 let (pos, vel) = smooth_damp_vec3(
                     camera_trans.translation,

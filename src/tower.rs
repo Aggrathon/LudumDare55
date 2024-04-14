@@ -3,9 +3,9 @@ use std::time::Duration;
 use bevy::prelude::*;
 use space_editor::prelude::*;
 
+use crate::level::{Gameplay, LevelLocal};
 use crate::projectile::{ProjectilePrefab, ProjectileTarget};
 use crate::spline::FollowCurve;
-use crate::state::{Gameplay, Local};
 use crate::unit::Unit;
 
 #[derive(Component, Reflect, Clone)]
@@ -80,7 +80,7 @@ fn shoot(
                     commands
                         .spawn(PrefabBundle::new(tower.projectile.path()))
                         .insert((
-                            Local,
+                            LevelLocal,
                             ProjectileTarget::new(
                                 unit,
                                 gt2.translation(),

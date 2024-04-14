@@ -2,7 +2,7 @@ use bevy::math::cubic_splines::CubicCurve;
 use bevy::prelude::*;
 use space_editor::prelude::*;
 
-use crate::state::Gameplay;
+use crate::level::Gameplay;
 
 #[derive(Component, Clone)]
 pub struct Curve {
@@ -46,6 +46,10 @@ impl Default for Curve {
 #[derive(Component, Clone, Reflect, Default)]
 #[reflect(Component, Default)]
 pub struct Spline;
+
+#[derive(Component, Clone, Reflect, Default)]
+#[reflect(Component, Default)]
+pub struct Width(pub f32);
 
 /// Splines into Curves
 fn convert_splines(
@@ -118,14 +122,16 @@ pub struct FollowCurve {
     curve: Entity,
     speed: f32,
     along: f32,
+    offset: Vec3,
 }
 
 impl FollowCurve {
-    pub fn new(curve: Entity, speed: f32) -> Self {
+    pub fn new(curve: Entity, speed: f32, offset: Vec3) -> Self {
         FollowCurve {
             curve,
             speed,
             along: 0.0,
+            offset,
         }
     }
 
@@ -141,8 +147,10 @@ pub fn follow_curve(
 ) {
     for (mut follow, mut trans) in query.iter_mut() {
         if let Ok((_, curve)) = curves.get(follow.curve) {
-            let (pos, vec) = curve.position(follow.along, follow.speed * time.delta_seconds());
+            let (pos, mut vec) = curve.position(follow.along, follow.speed * time.delta_seconds());
+            vec += follow.offset;
             follow.along = pos;
+            trans.look_at(vec, Vec3::Y);
             trans.translation = vec;
         }
     }
@@ -154,13 +162,19 @@ impl Plugin for SplinePlugin {
     fn build(&self, app: &mut bevy::prelude::App) {
         app.add_systems(PreUpdate, (convert_splines).in_set(Gameplay))
             .add_systems(Update, (follow_curve).in_set(Gameplay))
+            .editor_registry::<Width>()
             .editor_registry::<Spline>();
         #[cfg(feature = "editor")]
         app.add_systems(Update, debug_gizmos.run_if(in_state(EditorState::Editor)))
             .editor_bundle(
                 "Level",
                 "Spline",
-                (TransformBundle::default(), Spline, Name::new("Curve")),
+                (
+                    TransformBundle::default(),
+                    Spline,
+                    Width(2.0),
+                    Name::new("Curve"),
+                ),
             );
     }
 }

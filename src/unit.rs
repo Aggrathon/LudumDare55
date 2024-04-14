@@ -3,8 +3,8 @@ use std::time::Duration;
 use bevy::prelude::*;
 use space_editor::prelude::*;
 
-use crate::spline::{Curve, FollowCurve};
-use crate::state::{Gameplay, Local};
+use crate::level::{Gameplay, LevelLocal};
+use crate::spline::{Curve, FollowCurve, Width};
 use crate::utils::get_random_from_iter;
 
 #[derive(Clone, Copy, Reflect, Default)]
@@ -37,16 +37,27 @@ impl Default for Unit {
 pub fn instantiate_unit(
     mut commands: Commands,
     units: Query<(Entity, &Unit), Without<FollowCurve>>,
-    curves: Query<Entity, With<Curve>>,
+    curves: Query<(Entity, Option<&Width>), With<Curve>>,
 ) {
     for (entity, unit) in units.iter() {
         match get_random_from_iter(|| curves.iter()) {
             None => continue,
-            Some(curve) => commands
-                .get_entity(entity)
-                .unwrap()
-                .insert(FollowCurve::new(curve, unit.speed)),
-        };
+            Some((curve, width)) => {
+                let radius = width.map(|w| w.0).unwrap_or(1.0);
+                commands
+                    .get_entity(entity)
+                    .unwrap()
+                    .insert(FollowCurve::new(
+                        curve,
+                        unit.speed,
+                        Vec3::new(
+                            radius * fastrand::f32() * 2.0 - radius,
+                            0.0,
+                            radius * fastrand::f32() * 2.0 - radius,
+                        ),
+                    ));
+            }
+        }
     }
 }
 
@@ -86,7 +97,7 @@ pub fn tick_spawners(mut commands: Commands, mut spawners: Query<&mut Spawner>, 
             spawner.next = time + spawner.cooldown;
             commands
                 .spawn(PrefabBundle::new(spawner.prefab.path()))
-                .insert(Local);
+                .insert(LevelLocal);
         }
     }
 }

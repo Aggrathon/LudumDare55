@@ -1,7 +1,8 @@
+mod audio;
 mod camera;
+mod level;
 mod projectile;
 mod spline;
-mod state;
 mod tower;
 mod unit;
 mod utils;
@@ -9,10 +10,11 @@ mod utils;
 use bevy::prelude::*;
 use space_editor::prelude::*;
 
+use audio::AudioPlugin;
 use camera::CameraPlugin;
+use level::{LevelLocal, LevelPlugin};
 use projectile::ProjectilePlugin;
 use spline::SplinePlugin;
-use state::{Local, StatePlugin};
 use tower::TowerPlugin;
 use unit::UnitPlugin;
 
@@ -27,9 +29,10 @@ fn main() {
         SplinePlugin,
         UnitPlugin,
         CameraPlugin,
-        StatePlugin,
+        LevelPlugin,
         TowerPlugin,
         ProjectilePlugin,
+        AudioPlugin,
     ));
     #[cfg(feature = "editor")]
     app.add_systems(Startup, space_editor::space_editor_ui::simple_editor_setup);
@@ -44,8 +47,8 @@ fn main() {
 #[allow(dead_code)]
 fn spawn_scene(mut commands: Commands) {
     commands
-        .spawn(PrefabBundle::new("scenes/TestScene.scn.ron"))
-        .insert(Local);
+        .spawn(PrefabBundle::new("scenes/Level0.scn.ron"))
+        .insert(LevelLocal);
 }
 
 /// Needed to properly load cameras and lights from space_editor scenes

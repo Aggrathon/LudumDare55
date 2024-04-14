@@ -3,7 +3,7 @@ use std::time::Duration;
 use bevy::prelude::*;
 use space_editor::prelude::*;
 
-use crate::state::Gameplay;
+use crate::level::Gameplay;
 use crate::unit::Health;
 
 #[derive(Reflect, Clone, Copy, Default)]
