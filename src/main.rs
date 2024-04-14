@@ -4,6 +4,7 @@ mod level;
 mod projectile;
 mod spline;
 mod tower;
+mod ui;
 mod unit;
 mod utils;
 
@@ -12,10 +13,11 @@ use space_editor::prelude::*;
 
 use audio::AudioPlugin;
 use camera::CameraPlugin;
-use level::{LevelLocal, LevelPlugin};
+use level::{Level, LevelPlugin};
 use projectile::ProjectilePlugin;
 use spline::SplinePlugin;
 use tower::TowerPlugin;
+use ui::UiPlugin;
 use unit::UnitPlugin;
 
 fn main() {
@@ -33,27 +35,23 @@ fn main() {
         TowerPlugin,
         ProjectilePlugin,
         AudioPlugin,
+        UiPlugin,
     ));
     #[cfg(feature = "editor")]
     app.add_systems(Startup, space_editor::space_editor_ui::simple_editor_setup);
     #[cfg(not(feature = "editor"))]
-    app.add_systems(Startup, spawn_scene)
-        .add_systems(PreUpdate, uneditor)
-        .init_state::<EditorState>()
-        .insert_resource(bevy::pbr::DirectionalLightShadowMap { size: 2048 });
+    app.add_systems(Startup, |mut level: ResMut<NextState<Level>>| {
+        level.set(Level::MainMenu)
+    })
+    .add_systems(PreUpdate, noeditor)
+    .init_state::<EditorState>()
+    .insert_resource(bevy::pbr::DirectionalLightShadowMap { size: 2048 });
     app.run();
-}
-
-#[allow(dead_code)]
-fn spawn_scene(mut commands: Commands) {
-    commands
-        .spawn(PrefabBundle::new("scenes/Level0.scn.ron"))
-        .insert(LevelLocal);
 }
 
 /// Needed to properly load cameras and lights from space_editor scenes
 #[allow(dead_code)]
-fn uneditor(
+fn noeditor(
     mut commands: Commands,
     mut cameras: Query<(Entity, &mut Camera), With<PlaymodeCamera>>,
     mut lights: Query<(Entity, &mut DirectionalLight), With<PlaymodeLight>>,
@@ -82,7 +80,7 @@ fn uneditor(
             .cascade_shadow_config
             .bounds
             .iter_mut()
-            .for_each(|b| *b *= 1.5);
+            .for_each(|b| *b *= 2.0);
         commands
             .get_entity(entity)
             .unwrap()

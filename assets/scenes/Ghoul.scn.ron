@@ -58,9 +58,9 @@
         "bevy_render::view::visibility::Visibility": Inherited,
         "space_prefab::component::material::MaterialPrefab": (
           base_color: Rgba(
-            red: 1.0,
-            green: 1.0,
-            blue: 1.0,
+            red: 0.5,
+            green: 0.8,
+            blue: 0.5,
             alpha: 1.0,
           ),
           base_color_texture: "",

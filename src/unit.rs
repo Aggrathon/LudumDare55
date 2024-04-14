@@ -1,23 +1,43 @@
 use std::time::Duration;
 
 use bevy::prelude::*;
+use enum_iterator::Sequence;
 use space_editor::prelude::*;
 
-use crate::level::{Gameplay, LevelLocal};
+use crate::level::{GameStats, Gameplay, LevelLocal};
 use crate::spline::{Curve, FollowCurve, Width};
 use crate::utils::get_random_from_iter;
 
-#[derive(Clone, Copy, Reflect, Default)]
+#[derive(Clone, Copy, Reflect, Default, PartialEq, Eq, Sequence)]
 #[reflect(Default)]
 pub enum UnitPrefab {
     #[default]
-    PlaceHolder,
+    Imp,
+    Ghoul,
 }
 
 impl UnitPrefab {
-    pub fn path(&self) -> &'static str {
+    #[inline]
+    pub const fn path(&self) -> &'static str {
         match self {
-            UnitPrefab::PlaceHolder => "scenes/PlaceholderUnit.scn.ron",
+            UnitPrefab::Imp => "scenes/Imp.scn.ron",
+            UnitPrefab::Ghoul => "scenes/Ghoul.scn.ron",
+        }
+    }
+
+    #[inline]
+    pub const fn cost(&self) -> f32 {
+        match self {
+            UnitPrefab::Imp => 1.0,
+            UnitPrefab::Ghoul => 2.0,
+        }
+    }
+
+    #[inline]
+    pub const fn name(&self) -> &'static str {
+        match self {
+            UnitPrefab::Imp => "Imp",
+            UnitPrefab::Ghoul => "Ghoul",
         }
     }
 }
@@ -74,37 +94,69 @@ impl Default for Health {
 #[derive(Component, Reflect, Clone, Copy)]
 #[reflect(Component, Default)]
 pub struct Spawner {
-    prefab: UnitPrefab,
-    cooldown: Duration,
+    pub prefab: UnitPrefab,
+    pub number: u8,
     #[reflect(ignore)]
-    next: Duration,
+    prev: Duration,
+}
+
+impl Spawner {
+    #[inline]
+    pub fn progress(&self, time: Duration, speed: u8) -> f32 {
+        ((time - self.prev).as_secs_f32() / self.total_cooldown(speed).as_secs_f32()).min(1.0)
+    }
+
+    #[inline]
+    pub fn total_cooldown(&self, speed: u8) -> Duration {
+        Duration::from_secs_f32(
+            self.prefab.cost() * (self.number as f32) * 5.0 / (5.0 + speed as f32),
+        )
+    }
+
+    #[inline]
+    pub fn next(&self, speed: u8) -> Duration {
+        self.prev + self.total_cooldown(speed)
+    }
 }
 
 impl Default for Spawner {
     fn default() -> Self {
         Self {
             prefab: Default::default(),
-            cooldown: Duration::from_secs(1),
-            next: Duration::from_secs(0),
+            prev: Duration::from_secs(0),
+            number: 1,
         }
     }
 }
 
-pub fn tick_spawners(mut commands: Commands, mut spawners: Query<&mut Spawner>, time: Res<Time>) {
+pub fn tick_spawners(
+    mut commands: Commands,
+    mut spawners: Query<&mut Spawner>,
+    time: Res<Time>,
+    stats: Res<GameStats>,
+) {
     let time = time.elapsed();
     for mut spawner in spawners.iter_mut() {
-        if spawner.next < time {
-            spawner.next = time + spawner.cooldown;
-            commands
-                .spawn(PrefabBundle::new(spawner.prefab.path()))
-                .insert(LevelLocal);
+        if spawner.next(stats.upgrade_speed) < time {
+            spawner.prev = time;
+            for _ in 0..spawner.number {
+                commands
+                    .spawn(PrefabBundle::new(spawner.prefab.path()))
+                    .insert(LevelLocal);
+            }
         }
     }
 }
 
-pub fn die(mut commands: Commands, q: Query<(Entity, &Health), Changed<Health>>) {
+pub fn die(
+    mut commands: Commands,
+    q: Query<(Entity, &Health), Changed<Health>>,
+    mut stats: ResMut<GameStats>,
+) {
     for (entity, health) in q.iter() {
         if health.0 <= 0.0 {
+            stats.souls_current += 1;
+            stats.souls_total += 1;
             commands.get_entity(entity).unwrap().despawn_recursive();
         }
     }

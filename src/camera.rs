@@ -36,7 +36,7 @@ impl Default for CameraTarget {
 fn target_camera(
     mut targets: Query<(&mut CameraTarget, &Transform)>,
     mut cameras: Query<(&Camera, &mut Transform), Without<CameraTarget>>,
-    time: Res<Time>,
+    time: Res<Time<Real>>,
 ) {
     for (mut target, target_trans) in targets.iter_mut() {
         target.orbit_angle += target.orbit * time.delta_seconds();

@@ -6,7 +6,7 @@ use space_editor::prelude::*;
 use crate::level::Gameplay;
 use crate::unit::Health;
 
-#[derive(Reflect, Clone, Copy, Default)]
+#[derive(Reflect, Clone, Copy, Default, PartialEq, Eq)]
 #[reflect(Default)]
 pub enum DamageType {
     #[default]
@@ -129,7 +129,7 @@ pub enum ProjectilePrefab {
 }
 
 impl ProjectilePrefab {
-    pub fn path(&self) -> &'static str {
+    pub const fn path(&self) -> &'static str {
         match self {
             ProjectilePrefab::Arrow => "scenes/Arrow.scn.ron",
         }
