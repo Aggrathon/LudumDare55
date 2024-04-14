@@ -1,0 +1,626 @@
+(
+  resources: {},
+  entities: {
+    4294967305: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::component::AssetMesh": (
+          path: "models\\stake.glb#Mesh0/Primitive0",
+        ),
+        "space_prefab::component::AssetMaterial": (
+          path: "models\\stake.glb#Material0",
+        ),
+      },
+    ),
+    4294967306: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::component::AssetMesh": (
+          path: "models\\stake.glb#Mesh0/Primitive1",
+        ),
+        "space_prefab::component::AssetMaterial": (
+          path: "models\\stake.glb#Material1",
+        ),
+      },
+    ),
+    4294967307: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::component::AssetMesh": (
+          path: "models\\stake.glb#Mesh0/Primitive0",
+        ),
+        "space_prefab::component::AssetMaterial": (
+          path: "models\\stake.glb#Material0",
+        ),
+      },
+    ),
+    4294967308: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::component::AssetMesh": (
+          path: "models\\stake.glb#Mesh0/Primitive0",
+        ),
+        "space_prefab::component::AssetMaterial": (
+          path: "models\\stake.glb#Material0",
+        ),
+      },
+    ),
+    4294967309: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.5,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 0.9999992,
+            y: 1.0000027,
+            z: 1.0000029,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "ludum_dare_55::unit::Goal": (
+          radius: 3.0,
+        ),
+      },
+    ),
+    4294967310: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::component::AssetMesh": (
+          path: "models\\stake.glb#Mesh0/Primitive1",
+        ),
+        "space_prefab::component::AssetMaterial": (
+          path: "models\\stake.glb#Material1",
+        ),
+      },
+    ),
+    4294967311: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::component::AssetMesh": (
+          path: "models\\stake.glb#Mesh0/Primitive1",
+        ),
+        "space_prefab::component::AssetMaterial": (
+          path: "models\\stake.glb#Material1",
+        ),
+      },
+    ),
+    4294967312: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::component::AssetMesh": (
+          path: "models\\stake.glb#Mesh0/Primitive0",
+        ),
+        "space_prefab::component::AssetMaterial": (
+          path: "models\\stake.glb#Material0",
+        ),
+      },
+    ),
+    4294967313: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::component::AssetMesh": (
+          path: "models\\stake.glb#Mesh0/Primitive1",
+        ),
+        "space_prefab::component::AssetMaterial": (
+          path: "models\\stake.glb#Material1",
+        ),
+      },
+    ),
+    4294967314: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -1.0,
+            y: -0.5,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.5606008,
+            y: -0.028726708,
+            z: 0.13091533,
+            w: 0.8171674,
+          ),
+          scale: (
+            x: 0.9999992,
+            y: 1.0000027,
+            z: 1.0000029,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          4294967312,
+          4294967313,
+        ]),
+      },
+    ),
+    4294967315: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::component::AssetMesh": (
+          path: "models\\stake.glb#Mesh0/Primitive0",
+        ),
+        "space_prefab::component::AssetMaterial": (
+          path: "models\\stake.glb#Material0",
+        ),
+      },
+    ),
+    4294967316: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -0.6,
+            y: -0.5,
+            z: -0.6,
+          ),
+          rotation: (
+            x: 0.47942555,
+            y: 0.0,
+            z: 0.0,
+            w: 0.87758255,
+          ),
+          scale: (
+            x: 1.0,
+            y: 0.9999996,
+            z: 0.9999996,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          4294967307,
+          4294967311,
+        ]),
+      },
+    ),
+    4294967317: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -1.0,
+            y: -0.5,
+            z: -0.6,
+          ),
+          rotation: (
+            x: 0.47404215,
+            y: -0.07164447,
+            z: 0.13114432,
+            w: 0.8677283,
+          ),
+          scale: (
+            x: 1.0,
+            y: 0.9999996,
+            z: 0.9999996,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          4294967305,
+          4294967310,
+        ]),
+      },
+    ),
+    4294967318: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: -0.5,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.556361,
+            y: 0.0,
+            z: 0.0,
+            w: 0.8309407,
+          ),
+          scale: (
+            x: 1.0,
+            y: 0.99999964,
+            z: 0.99999964,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          4294967322,
+          4294967325,
+        ]),
+      },
+    ),
+    4294967319: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.6,
+            y: -0.5,
+            z: -0.6,
+          ),
+          rotation: (
+            x: 0.47942555,
+            y: 0.0,
+            z: 0.0,
+            w: 0.87758255,
+          ),
+          scale: (
+            x: 1.0,
+            y: 0.9999996,
+            z: 0.9999996,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          4294967324,
+          4294967326,
+        ]),
+      },
+    ),
+    4294967320: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 1.5,
+            y: -0.5,
+            z: -0.6,
+          ),
+          rotation: (
+            x: 0.47404215,
+            y: 0.07164447,
+            z: -0.1311443,
+            w: 0.86772823,
+          ),
+          scale: (
+            x: 1.0,
+            y: 0.9999996,
+            z: 0.9999996,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          4294967306,
+          4294967308,
+        ]),
+      },
+    ),
+    4294967321: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 1.0,
+            y: -0.5,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.5502802,
+            y: 0.11086118,
+            z: -0.07532497,
+            w: 0.8241527,
+          ),
+          scale: (
+            x: 0.9999999,
+            y: 1.0,
+            z: 0.9999998,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          4294967323,
+          4294967315,
+        ]),
+      },
+    ),
+    4294967322: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::component::AssetMesh": (
+          path: "models\\stake.glb#Mesh0/Primitive0",
+        ),
+        "space_prefab::component::AssetMaterial": (
+          path: "models\\stake.glb#Material0",
+        ),
+      },
+    ),
+    4294967323: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::component::AssetMesh": (
+          path: "models\\stake.glb#Mesh0/Primitive1",
+        ),
+        "space_prefab::component::AssetMaterial": (
+          path: "models\\stake.glb#Material1",
+        ),
+      },
+    ),
+    4294967324: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::component::AssetMesh": (
+          path: "models\\stake.glb#Mesh0/Primitive0",
+        ),
+        "space_prefab::component::AssetMaterial": (
+          path: "models\\stake.glb#Material0",
+        ),
+      },
+    ),
+    4294967325: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::component::AssetMesh": (
+          path: "models\\stake.glb#Mesh0/Primitive1",
+        ),
+        "space_prefab::component::AssetMaterial": (
+          path: "models\\stake.glb#Material1",
+        ),
+      },
+    ),
+    4294967326: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::component::AssetMesh": (
+          path: "models\\stake.glb#Mesh0/Primitive1",
+        ),
+        "space_prefab::component::AssetMaterial": (
+          path: "models\\stake.glb#Material1",
+        ),
+      },
+    ),
+  },
+)

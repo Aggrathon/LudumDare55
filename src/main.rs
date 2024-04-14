@@ -40,12 +40,12 @@ fn main() {
     #[cfg(feature = "editor")]
     app.add_systems(Startup, space_editor::space_editor_ui::simple_editor_setup);
     #[cfg(not(feature = "editor"))]
-    app.add_systems(Startup, |mut level: ResMut<NextState<Level>>| {
-        level.set(Level::MainMenu)
-    })
-    .add_systems(PreUpdate, noeditor)
-    .init_state::<EditorState>()
-    .insert_resource(bevy::pbr::DirectionalLightShadowMap { size: 2048 });
+    app.add_systems(PreUpdate, noeditor)
+        .init_state::<EditorState>()
+        .add_systems(Startup, |mut level: ResMut<NextState<Level>>| {
+            level.set(Level::MainMenu)
+        })
+        .insert_resource(bevy::pbr::DirectionalLightShadowMap { size: 2048 });
     app.run();
 }
 

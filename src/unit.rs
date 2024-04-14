@@ -162,6 +162,45 @@ pub fn die(
     }
 }
 
+#[derive(Component, Reflect, Clone, Copy)]
+#[reflect(Component, Default)]
+pub struct Goal {
+    radius: f32,
+}
+
+impl Default for Goal {
+    fn default() -> Self {
+        Self { radius: 3.0 }
+    }
+}
+
+fn score(
+    mut commands: Commands,
+    goals: Query<(&Goal, &GlobalTransform)>,
+    units: Query<(Entity, &GlobalTransform), With<Unit>>,
+    mut stats: ResMut<GameStats>,
+) {
+    for (goal, gt) in goals.iter() {
+        let pos = gt.translation();
+        let rad = goal.radius * goal.radius;
+        for (e, gt) in units.iter() {
+            if pos.distance_squared(gt.translation()) < rad {
+                commands.get_entity(e).unwrap().despawn_recursive();
+                if stats.defender_morale > 0 {
+                    stats.defender_morale -= 1;
+                }
+            }
+        }
+    }
+}
+
+#[allow(dead_code)]
+fn draw_gizmos(mut gizmos: Gizmos, q: Query<(&Goal, &GlobalTransform)>) {
+    for (g, gt) in q.iter() {
+        gizmos.circle(gt.translation(), Direction3d::Y, g.radius, Color::GREEN);
+    }
+}
+
 pub struct UnitPlugin;
 
 impl Plugin for UnitPlugin {
@@ -169,25 +208,29 @@ impl Plugin for UnitPlugin {
         app.editor_registry::<Health>()
             .editor_registry::<Unit>()
             .editor_registry::<Spawner>()
+            .editor_registry::<Goal>()
             .register_type::<UnitPrefab>()
             .add_systems(PreUpdate, instantiate_unit.in_set(Gameplay))
-            .add_systems(Update, (die, tick_spawners).in_set(Gameplay));
+            .add_systems(Update, (die, tick_spawners, score).in_set(Gameplay));
         #[cfg(feature = "editor")]
-        app.editor_bundle(
-            "Prefab",
-            "Unit",
-            (
-                SpatialBundle::default(),
-                Unit::default(),
-                Health::default(),
-                Name::new("Unit"),
-            ),
-        );
-        #[cfg(feature = "editor")]
-        app.editor_bundle(
-            "Level",
-            "Spawner",
-            (Spawner::default(), Name::new("Spawner")),
-        );
+        {
+            app.add_systems(Update, draw_gizmos);
+            app.editor_bundle(
+                "Prefab",
+                "Unit",
+                (
+                    SpatialBundle::default(),
+                    Unit::default(),
+                    Health::default(),
+                    Name::new("Unit"),
+                ),
+            );
+            app.editor_bundle(
+                "Level",
+                "Spawner",
+                (Spawner::default(), Name::new("Spawner")),
+            );
+            app.editor_bundle("Level", "Goal", (Goal::default(), Name::new("Goal")));
+        }
     }
 }

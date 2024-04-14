@@ -1,5 +1,3 @@
-use std::time::Duration;
-
 use bevy::prelude::*;
 use bevy_egui::egui::{Align2, Color32, Frame, Layout, RichText, Rounding, Vec2, Widget};
 use bevy_egui::{egui, EguiContexts, EguiPlugin, EguiSettings};
@@ -117,7 +115,7 @@ fn game_ui(
                         (time.elapsed() - stats.start_time).as_secs_f32()
                             / GameStats::TIME_LIMIT.as_secs_f32(),
                     )
-                    .text("Archdemons annoyance")
+                    .text("Archdemon boredom")
                     .desired_width(width)
                     .fill(Color32::from_rgb(180, 100, 0)),
                 );
@@ -214,7 +212,7 @@ fn game_ui(
                         stats.upgrade_speed += 1;
                     }
                     if stats.upgrade_level + 1 < cardinality::<UnitPrefab>() as u8
-                        && ui.button("New types of demons").clicked()
+                        && ui.button("New type of demons").clicked()
                     {
                         stats.souls_current -= stats.souls_next;
                         stats.souls_next += stats.souls_next / 2;
@@ -251,17 +249,19 @@ pub struct UiPlugin;
 
 impl Plugin for UiPlugin {
     fn build(&self, app: &mut App) {
-        app.add_plugins(EguiPlugin)
-            .add_systems(Startup, setup_ui)
-            .add_systems(
-                Update,
-                main_menu.in_set(Gameplay).run_if(in_state(Level::MainMenu)),
-            )
-            .add_systems(
-                Update,
-                game_ui
-                    .in_set(Gameplay)
-                    .run_if(not(in_state(Level::MainMenu))),
-            );
+        #[cfg(not(feature = "editor"))]
+        app.add_plugins(EguiPlugin);
+        #[cfg(not(feature = "editor"))]
+        app.add_systems(Startup, setup_ui);
+        app.add_systems(
+            Update,
+            main_menu.in_set(Gameplay).run_if(in_state(Level::MainMenu)),
+        )
+        .add_systems(
+            Update,
+            game_ui
+                .in_set(Gameplay)
+                .run_if(not(in_state(Level::MainMenu))),
+        );
     }
 }
