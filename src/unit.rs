@@ -14,6 +14,8 @@ pub enum UnitPrefab {
     #[default]
     Imp,
     Ghoul,
+    Hellhound,
+    DarkKnight,
 }
 
 impl UnitPrefab {
@@ -22,6 +24,8 @@ impl UnitPrefab {
         match self {
             UnitPrefab::Imp => "scenes/Imp.scn.ron",
             UnitPrefab::Ghoul => "scenes/Ghoul.scn.ron",
+            UnitPrefab::Hellhound => "scenes/Hellhound.scn.ron",
+            UnitPrefab::DarkKnight => "scenes/DarkKnight.scn.ron",
         }
     }
 
@@ -30,6 +34,8 @@ impl UnitPrefab {
         match self {
             UnitPrefab::Imp => 1.0,
             UnitPrefab::Ghoul => 2.0,
+            UnitPrefab::Hellhound => 2.0,
+            UnitPrefab::DarkKnight => 4.0,
         }
     }
 
@@ -38,6 +44,8 @@ impl UnitPrefab {
         match self {
             UnitPrefab::Imp => "Imp",
             UnitPrefab::Ghoul => "Ghoul",
+            UnitPrefab::Hellhound => "Hellhound",
+            UnitPrefab::DarkKnight => "Dark Knight",
         }
     }
 }

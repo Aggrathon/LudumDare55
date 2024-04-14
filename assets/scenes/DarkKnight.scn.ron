@@ -1,7 +1,7 @@
 (
   resources: {},
   entities: {
-    8589934600: (
+    8589934601: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
@@ -23,20 +23,20 @@
         ),
         "bevy_render::view::visibility::Visibility": Visible,
         "space_prefab::save::ChildrenPrefab": ([
-          8589934601,
+          8589934602,
         ]),
-        "ludum_dare_55::unit::Health": (40.0),
+        "ludum_dare_55::unit::Health": (200.0),
         "ludum_dare_55::unit::Unit": (
-          speed: 2.5,
+          speed: 1.5,
         ),
       },
     ),
-    8589934601: (
+    8589934602: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
             x: 0.0,
-            y: 0.6,
+            y: 1.0,
             z: 0.0,
           ),
           rotation: (
@@ -54,9 +54,9 @@
         "bevy_render::view::visibility::Visibility": Inherited,
         "space_prefab::component::material::MaterialPrefab": (
           base_color: Rgba(
-            red: 1.0,
-            green: 0.1,
-            blue: 0.2,
+            red: 0.101960786,
+            green: 0.101960786,
+            blue: 0.101960786,
             alpha: 1.0,
           ),
           base_color_texture: "",
@@ -68,7 +68,7 @@
           ),
           emissive_texture: "",
           perceptual_roughness: 0.5,
-          metallic: 0.0,
+          metallic: 1.0,
           metallic_roughness_texture: "",
           reflectance: 0.5,
           normal_map_texture: "",
@@ -85,8 +85,8 @@
           max_parallax_layer_count: 16.0,
         ),
         "space_prefab::component::shape::MeshPrimitive3dPrefab": Cylinder((
-          r: 0.35,
-          half_height: 0.6,
+          r: 0.5,
+          half_height: 1.0,
         )),
       },
     ),

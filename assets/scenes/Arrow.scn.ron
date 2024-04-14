@@ -1,7 +1,7 @@
 (
   resources: {},
   entities: {
-    12884902140: (
+    4294967305: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
@@ -27,12 +27,11 @@
         ),
         "bevy_render::view::visibility::Visibility": Inherited,
         "space_prefab::save::ChildrenPrefab": ([
-          17179869695,
+          4294967306,
         ]),
         "ludum_dare_55::projectile::HomingProjectile": (
-          damage_type: Physical,
-          damage: 20.0,
-          speed: 20.0,
+          damage: Physical(20.0),
+          speed: 25.0,
         ),
         "ludum_dare_55::audio::PlayOnAwake": (
           sound: Arrow,
@@ -41,7 +40,7 @@
         ),
       },
     ),
-    17179869695: (
+    4294967306: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (

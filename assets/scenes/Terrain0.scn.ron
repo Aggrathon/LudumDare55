@@ -1,0 +1,3680 @@
+(
+  resources: {},
+  entities: {
+    8589934614: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -1.2,
+            y: -1.1,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.7071068,
+            z: 0.0,
+            w: 0.7071068,
+          ),
+          scale: (
+            x: 0.75,
+            y: 1.0,
+            z: 0.75,
+          ),
+        ),
+        "bevy_core::name::Name": (
+          hash: 18300496565399316442,
+          name: "Curve",
+        ),
+        "space_prefab::save::ChildrenPrefab": ([
+          463856468143,
+          8589935186,
+          8589934880,
+          12884902069,
+          8589934733,
+          8589934628,
+          8589934772,
+        ]),
+        "ludum_dare_55::spline::Width": (2.0),
+        "ludum_dare_55::spline::Spline": (),
+      },
+    ),
+    8589934615: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 26.315027,
+            y: 0.0,
+            z: -19.49659,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902460,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934617: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -31.988667,
+            y: 0.0,
+            z: -30.761614,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934866,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934618: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -21.201036,
+            y: 0.0,
+            z: 6.7767115,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935141,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934619: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 34.45583,
+            y: 0.0,
+            z: 21.052887,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935145,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934620: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -29.438488,
+            y: 0.0,
+            z: 8.84419,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934868,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934621: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -23.104033,
+            y: 0.0,
+            z: -2.1079807,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935147,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934622: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -25.17274,
+            y: 0.0,
+            z: 25.325846,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935151,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934623: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 33.62056,
+            y: 0.0,
+            z: 6.7151275,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934741,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934625: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 19.780083,
+            y: 0.0,
+            z: 33.542595,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934713,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934626: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -35.64378,
+            y: 0.0,
+            z: 12.196606,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935169,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934627: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 29.723036,
+            y: 0.0,
+            z: -6.731205,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935168,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934628: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 32.770996,
+            y: 0.00000000000079580786,
+            z: -1.2132365,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+      },
+    ),
+    8589934630: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -31.250582,
+            y: 0.0,
+            z: 13.472058,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935162,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934631: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -26.53295,
+            y: 0.0,
+            z: 33.911297,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935157,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934632: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 30.644812,
+            y: 0.0,
+            z: -19.535864,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902457,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934633: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 22.381035,
+            y: 0.0,
+            z: -34.780807,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935153,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934634: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -33.36022,
+            y: 0.0,
+            z: 28.9696,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934742,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934635: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 33.27979,
+            y: 0.0,
+            z: 15.877694,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935156,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934636: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 34.666405,
+            y: 0.0,
+            z: -5.9520206,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902448,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934637: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 27.011053,
+            y: 0.0,
+            z: 17.915415,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934871,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934638: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -35.303104,
+            y: 0.0,
+            z: 33.590733,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934711,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934639: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 34.75177,
+            y: 0.0,
+            z: -27.979847,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935166,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934640: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -33.107544,
+            y: 0.0,
+            z: 8.786338,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902451,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934641: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -29.047144,
+            y: 0.0,
+            z: -16.577682,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935160,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934642: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 26.047825,
+            y: 0.0,
+            z: -24.493816,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934873,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934643: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -35.226624,
+            y: 0.0,
+            z: -8.633875,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935163,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934644: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -26.53338,
+            y: 0.0,
+            z: -9.366412,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934874,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934645: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -19.555101,
+            y: 0.0,
+            z: -4.8103523,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935165,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934646: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -35.148594,
+            y: 0.0,
+            z: -12.695303,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935159,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934647: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -35.98849,
+            y: 0.0,
+            z: 23.981888,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934712,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934648: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -34.736534,
+            y: 0.0,
+            z: -25.788517,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934766,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934649: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -33.76258,
+            y: 0.0,
+            z: -16.689398,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902454,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934650: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.1,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_core::name::Name": (
+          hash: 18262131308021917014,
+          name: "Ground",
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::component::AssetMesh": (
+          path: "models\\ground_plains.glb#Mesh0/Primitive0",
+        ),
+        "space_prefab::component::AssetMaterial": (
+          path: "models\\ground_plains.glb#Material0",
+        ),
+      },
+    ),
+    8589934668: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -29.312143,
+            y: 0.0,
+            z: -1.2474471,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935109,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934669: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -29.432365,
+            y: 0.0,
+            z: 26.549007,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934862,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934679: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -27.592186,
+            y: 0.0,
+            z: 16.28337,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934677,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934680: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -20.71713,
+            y: 0.0,
+            z: 2.473868,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935115,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934681: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 33.12944,
+            y: 0.0,
+            z: -32.12892,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935118,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934714: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 28.571613,
+            y: 0.0,
+            z: 28.356194,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902430,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934729: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 30.535366,
+            y: 0.0,
+            z: -25.049555,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935112,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934730: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 32.292965,
+            y: 0.0,
+            z: -10.79546,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934708,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934731: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 27.483664,
+            y: 0.0,
+            z: 34.201653,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934725,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934732: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -24.303179,
+            y: 0.0,
+            z: 21.174006,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934863,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934733: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 16.145056,
+            y: 0.00000000000079580786,
+            z: -2.408411,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+      },
+    ),
+    8589934757: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 26.520416,
+            y: 0.0,
+            z: 22.349056,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934861,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934761: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -17.200222,
+            y: 0.0,
+            z: 8.031944,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902433,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934768: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -35.855877,
+            y: 0.0,
+            z: -29.518198,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935142,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934770: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 30.302994,
+            y: 0.0,
+            z: -35.815407,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934867,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934772: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 46.08449,
+            y: 0.00000000000079580786,
+            z: 6.62992,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+      },
+    ),
+    8589934774: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -29.987421,
+            y: 0.0,
+            z: -26.330791,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935148,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934776: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 29.339113,
+            y: 0.0,
+            z: -29.832354,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934869,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934778: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -20.259657,
+            y: 0.0,
+            z: 11.415269,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902445,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934876: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -32.428898,
+            y: 0.0,
+            z: 18.526,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934855,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934877: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -35.75089,
+            y: 0.0,
+            z: -34.102856,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934765,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934878: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 31.010752,
+            y: 0.0,
+            z: 24.285204,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934665,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934879: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 24.6304,
+            y: 0.0,
+            z: -30.074894,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934707,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934880: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -16.153368,
+            y: 0.0000000000013429258,
+            z: 9.161722,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+      },
+    ),
+    8589934881: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -30.785738,
+            y: 0.0,
+            z: 4.447011,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934860,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934882: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -30.315842,
+            y: 0.0,
+            z: -12.315246,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902418,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934883: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -25.872066,
+            y: 0.0,
+            z: -27.299137,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902421,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934884: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -23.1316,
+            y: 0.0,
+            z: 16.250837,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902424,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934885: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -26.950993,
+            y: 0.0,
+            z: -31.813606,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902427,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934886: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -35.096382,
+            y: 0.0,
+            z: -21.348145,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935135,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589934887: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 23.667524,
+            y: 0.0,
+            z: 31.906786,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935138,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935171: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -32.557934,
+            y: 0.0,
+            z: -4.43094,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902403,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935172: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -30.414087,
+            y: 0.0,
+            z: -7.861412,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935108,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935174: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -26.069254,
+            y: 0.0,
+            z: 30.000853,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902406,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935175: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 26.636724,
+            y: 0.0,
+            z: -33.381332,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935111,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935177: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 28.910192,
+            y: 0.0,
+            z: -1.1338542,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902409,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935178: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 35.27328,
+            y: 0.0,
+            z: -35.55942,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935114,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935180: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 33.38706,
+            y: 0.0,
+            z: 1.0638906,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902412,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935181: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -26.886423,
+            y: 0.0,
+            z: -35.61346,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935117,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935183: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 32.54951,
+            y: 0.0,
+            z: -3.0447226,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935120,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935184: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -33.043602,
+            y: 0.0,
+            z: 22.822083,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935121,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935186: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -33.574383,
+            y: 0.0000000000010444978,
+            z: -7.274468,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+      },
+    ),
+    8589935187: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -36.04405,
+            y: 0.0,
+            z: 17.421768,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935124,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935189: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -35.91657,
+            y: 0.0,
+            z: 2.2155826,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935127,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935190: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -29.135948,
+            y: 0.0,
+            z: 20.79391,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934666,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935192: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -30.780058,
+            y: 0.0,
+            z: -21.125832,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935130,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935193: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 34.756226,
+            y: 0.0,
+            z: -17.881521,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934726,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935195: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -23.95846,
+            y: 0.0,
+            z: 9.388721,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935133,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935196: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -36.00808,
+            y: 0.0,
+            z: 6.5386305,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934727,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935198: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -26.161724,
+            y: 0.0,
+            z: -21.674828,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934728,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935199: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -25.908615,
+            y: 0.0,
+            z: 1.4196151,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934864,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935201: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 23.413818,
+            y: 0.0,
+            z: 26.647959,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934709,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935202: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 27.86606,
+            y: 0.0,
+            z: -11.416902,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934865,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    8589935211: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -29.62914,
+            y: 0.000000000000042632564,
+            z: -29.014095,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          4294967917,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Rock.scn.ron",
+        ),
+      },
+    ),
+    12884901900: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 34.612434,
+            y: 0.0,
+            z: 25.651005,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934756,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884901901: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 29.637722,
+            y: 0.0,
+            z: -15.259991,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902442,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884901902: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -26.496374,
+            y: 0.0,
+            z: 5.1925335,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935150,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884901903: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 34.547398,
+            y: 0.0,
+            z: -13.826817,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935154,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884901905: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 29.679226,
+            y: 0.0,
+            z: 9.397309,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934710,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884901906: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -22.314182,
+            y: 0.0,
+            z: -9.804809,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902436,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884901907: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 30.34442,
+            y: 0.0,
+            z: 19.398542,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935144,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884901925: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -32.93799,
+            y: 0.0,
+            z: 0.40182915,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934872,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884901989: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 21.448092,
+            y: -0.000000000000042632564,
+            z: 3.8373919,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934737,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Rock.scn.ron",
+        ),
+      },
+    ),
+    12884902011: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -9.870488,
+            y: -0.000000000000021316282,
+            z: 4.568959,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902190,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Rock.scn.ron",
+        ),
+      },
+    ),
+    12884902065: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -16.755596,
+            y: 0.0,
+            z: -0.6006895,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934678,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884902067: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -24.697142,
+            y: 0.0,
+            z: -17.00936,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902439,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884902069: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -0.9087452,
+            y: -0.00000000000002842171,
+            z: 9.140545,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+      },
+    ),
+    12884902071: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 29.811163,
+            y: 0.0,
+            z: 4.2894707,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934667,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884902073: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 34.61983,
+            y: 0.0,
+            z: -22.872025,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934870,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884902080: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -21.97475,
+            y: -0.00000000000002842171,
+            z: 23.708673,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934892,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Rock.scn.ron",
+        ),
+      },
+    ),
+    12884902184: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -24.140245,
+            y: -0.00000000000002842171,
+            z: -14.216724,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934890,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Rock.scn.ron",
+        ),
+      },
+    ),
+    12884902198: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -16.130535,
+            y: -0.00000000000004973799,
+            z: -29.971802,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934786,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Rock.scn.ron",
+        ),
+      },
+    ),
+    12884902200: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 16.815485,
+            y: -0.000000000000042632564,
+            z: -26.525793,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934758,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Rock.scn.ron",
+        ),
+      },
+    ),
+    12884902206: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 17.37134,
+            y: -0.000000000000042632564,
+            z: 20.084757,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934654,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Rock.scn.ron",
+        ),
+      },
+    ),
+    12884902466: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 32.480915,
+            y: 0.0,
+            z: 33.934456,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934856,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884902469: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -31.628819,
+            y: 0.0,
+            z: -35.201992,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934857,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884902472: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -22.019966,
+            y: 0.0,
+            z: -35.887398,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934858,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884902475: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -23.79057,
+            y: 0.0,
+            z: -6.6022563,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934859,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884902478: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -30.601149,
+            y: 0.0,
+            z: 33.964054,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902415,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884902481: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -25.835041,
+            y: 0.0,
+            z: -12.740183,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935123,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884902484: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -27.711697,
+            y: 0.0,
+            z: -4.3124633,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935126,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884902487: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -15.656459,
+            y: 0.0,
+            z: 3.5214,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935129,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884902490: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 34.272808,
+            y: 0.0,
+            z: 29.698984,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935132,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884902493: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -35.91543,
+            y: 0.0,
+            z: -2.8989925,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935136,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884902496: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -26.715883,
+            y: 0.0,
+            z: 12.000735,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589935139,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    12884902502: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 33.70733,
+            y: -0.00000000000002842171,
+            z: 3.980964,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          34359738384,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Rock.scn.ron",
+        ),
+      },
+    ),
+    17179869189: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 30.167725,
+            y: -0.00000000000002842171,
+            z: 31.456167,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934781,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Rock.scn.ron",
+        ),
+      },
+    ),
+    17179869498: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 19.010641,
+            y: -0.000000000000042632564,
+            z: -12.845845,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934908,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Rock.scn.ron",
+        ),
+      },
+    ),
+    17179869504: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 9.521715,
+            y: -0.00000000000005684342,
+            z: 33.63472,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934914,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Rock.scn.ron",
+        ),
+      },
+    ),
+    17179869507: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -30.34768,
+            y: 0.000000000000014210855,
+            z: 30.028347,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934916,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Rock.scn.ron",
+        ),
+      },
+    ),
+    30064771081: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 29.326128,
+            y: 0.0,
+            z: 13.706889,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          468151435839,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    30064771083: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 34.169563,
+            y: 0.0,
+            z: 11.333466,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934875,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Spruce.scn.ron",
+        ),
+      },
+    ),
+    34359738378: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 27.226862,
+            y: -0.00000000000002842171,
+            z: -27.466433,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          8589934613,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Rock.scn.ron",
+        ),
+      },
+    ),
+    463856468143: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -43.938705,
+            y: 0.0000000000011723955,
+            z: -9.548611,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+      },
+    ),
+  },
+)

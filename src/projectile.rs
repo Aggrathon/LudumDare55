@@ -6,13 +6,18 @@ use space_editor::prelude::*;
 use crate::level::Gameplay;
 use crate::unit::Health;
 
-#[derive(Reflect, Clone, Copy, Default, PartialEq, Eq)]
+#[derive(Reflect, Clone, Copy, PartialEq)]
 #[reflect(Default)]
-pub enum DamageType {
-    #[default]
-    Physical,
-    Magical,
-    Explosive,
+pub enum Damage {
+    Physical(f32),
+    Magical(f32),
+    Explosive(f32, f32),
+}
+
+impl Default for Damage {
+    fn default() -> Self {
+        Damage::Physical(20.0)
+    }
 }
 
 #[derive(Component, Clone, Copy)]
@@ -68,16 +73,14 @@ fn setup_projectile(
 #[derive(Component, Reflect, Clone)]
 #[reflect(Component, Default)]
 pub struct HomingProjectile {
-    damage_type: DamageType,
-    damage: f32,
+    damage: Damage,
     speed: f32,
 }
 
 impl Default for HomingProjectile {
     fn default() -> Self {
         Self {
-            damage: 10.0,
-            damage_type: DamageType::Physical,
+            damage: Damage::Physical(10.0),
             speed: 20.0,
         }
     }
@@ -86,8 +89,7 @@ impl Default for HomingProjectile {
 #[derive(Component, Reflect, Clone)]
 #[reflect(Component, Default)]
 pub struct RayProjectile {
-    damage_type: DamageType,
-    damage: f32,
+    damage: Damage,
     color: Color,
     duration: Duration,
 }
@@ -95,8 +97,7 @@ pub struct RayProjectile {
 impl Default for RayProjectile {
     fn default() -> Self {
         Self {
-            damage: 10.0,
-            damage_type: DamageType::Magical,
+            damage: Damage::Magical(10.0),
             color: Color::WHITE,
             duration: Duration::from_secs(1),
         }
@@ -106,16 +107,14 @@ impl Default for RayProjectile {
 #[derive(Component, Reflect, Clone)]
 #[reflect(Component, Default)]
 pub struct DumbProjectile {
-    damage_type: DamageType,
-    damage: f32,
+    damage: Damage,
     speed: f32,
 }
 
 impl Default for DumbProjectile {
     fn default() -> Self {
         Self {
-            damage: 10.0,
-            damage_type: DamageType::Explosive,
+            damage: Damage::Explosive(10.0, 4.0),
             speed: 20.0,
         }
     }
@@ -126,12 +125,14 @@ impl Default for DumbProjectile {
 pub enum ProjectilePrefab {
     #[default]
     Arrow,
+    Bomb,
 }
 
 impl ProjectilePrefab {
     pub const fn path(&self) -> &'static str {
         match self {
             ProjectilePrefab::Arrow => "scenes/Arrow.scn.ron",
+            ProjectilePrefab::Bomb => "scenes/Bomb.scn.ron",
         }
     }
 }
@@ -148,15 +149,15 @@ fn despawn_timer(mut commands: Commands, q: Query<(Entity, &DespawnTimer)>, time
 fn shoot_dumb(
     mut commands: Commands,
     mut q: Query<(Entity, &DumbProjectile, &ProjectileTarget, &mut Transform)>,
+    mut targets: Query<(&GlobalTransform, &mut Health)>,
     time: Res<Time>,
 ) {
     for (entity, proj, target, mut trans) in q.iter_mut() {
-        let delta = target.target - trans.translation;
+        let delta = target.target + Vec3::Y * 0.3 - trans.translation;
         let speed = proj.speed * time.delta_seconds();
         let len2 = delta.length_squared();
         if len2 < speed * speed {
-            // TODO boom
-            println!("boom");
+            deal_damage(trans.translation, proj.damage, target.entity, &mut targets);
             commands.get_entity(entity).unwrap().despawn_recursive();
         } else {
             trans.translation += delta * (speed / len2.sqrt());
@@ -172,12 +173,12 @@ fn shoot_homing(
     time: Res<Time>,
 ) {
     for (entity, proj, target, mut trans) in q.iter_mut() {
-        if let Ok((gt, mut health)) = targets.get_mut(target.entity) {
-            let delta = gt.translation() - trans.translation;
+        if let Ok((gt, _)) = targets.get(target.entity) {
+            let delta = gt.translation() + Vec3::Y * 0.3 - trans.translation;
             let speed = proj.speed * time.delta_seconds();
             let len2 = delta.length_squared();
             if len2 < speed * speed {
-                health.0 -= proj.damage;
+                deal_damage(trans.translation, proj.damage, target.entity, &mut targets);
                 commands.get_entity(entity).unwrap().despawn_recursive();
             } else {
                 trans.translation += delta * (speed / len2.sqrt());
@@ -185,6 +186,35 @@ fn shoot_homing(
             }
         } else {
             commands.get_entity(entity).unwrap().despawn_recursive();
+        }
+    }
+}
+
+fn deal_damage(
+    pos: Vec3,
+    damage: Damage,
+    target: Entity,
+    targets: &mut Query<(&GlobalTransform, &mut Health)>,
+) {
+    match damage {
+        Damage::Physical(d) => {
+            if let Ok((_, mut health)) = targets.get_mut(target) {
+                health.0 -= d;
+            }
+        }
+        Damage::Magical(d) => {
+            if let Ok((_, mut health)) = targets.get_mut(target) {
+                health.0 -= d;
+            }
+        }
+        Damage::Explosive(d, r) => {
+            let r2 = r * r;
+            for (gt, mut health) in targets.iter_mut() {
+                if pos.distance_squared(gt.translation()) < r2 {
+                    health.0 -= d;
+                }
+                // TODO FX
+            }
         }
     }
 }
@@ -215,7 +245,7 @@ pub struct ProjectilePlugin;
 
 impl Plugin for ProjectilePlugin {
     fn build(&self, app: &mut App) {
-        app.register_type::<DamageType>()
+        app.register_type::<Damage>()
             .register_type::<ProjectilePrefab>()
             .editor_registry::<HomingProjectile>()
             .editor_registry::<RayProjectile>()

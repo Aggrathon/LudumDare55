@@ -1,4 +1,5 @@
 use std::f32::consts::PI;
+use std::time::Duration;
 
 use bevy::prelude::*;
 use space_editor::prelude::*;
@@ -36,7 +37,7 @@ impl Default for CameraTarget {
 fn target_camera(
     mut targets: Query<(&mut CameraTarget, &Transform)>,
     mut cameras: Query<(&Camera, &mut Transform), Without<CameraTarget>>,
-    time: Res<Time<Real>>,
+    time: Res<Time>,
 ) {
     for (mut target, target_trans) in targets.iter_mut() {
         target.orbit_angle += target.orbit * time.delta_seconds();

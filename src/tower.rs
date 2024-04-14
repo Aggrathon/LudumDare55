@@ -20,6 +20,10 @@ impl Default for Targetter {
     }
 }
 
+#[derive(Component, Reflect, Copy, Clone, Default)]
+#[reflect(Component, Default)]
+pub struct LookAtTarget;
+
 #[derive(Component, Clone, Copy)]
 pub struct Target(pub Entity);
 
@@ -59,6 +63,18 @@ fn find_target(
                 commands.get_entity(entity).unwrap().insert(Target(target));
                 furthest = fc.distance();
             }
+        }
+    }
+}
+fn look_at_target(
+    mut q: Query<(&Target, &GlobalTransform, &mut Transform), With<LookAtTarget>>,
+    units: Query<&GlobalTransform, With<Unit>>,
+) {
+    for (target, gt, mut trans) in q.iter_mut() {
+        if let Ok(gt2) = units.get(target.0) {
+            let mut dir = gt2.translation() - gt.translation();
+            dir.y = 0.0;
+            trans.look_to(dir, Vec3::Y);
         }
     }
 }
@@ -119,8 +135,12 @@ pub struct TowerPlugin;
 impl Plugin for TowerPlugin {
     fn build(&self, app: &mut App) {
         app.editor_registry::<Targetter>()
+            .editor_registry::<LookAtTarget>()
             .editor_registry::<Tower>()
-            .add_systems(Update, (find_target, shoot).in_set(Gameplay));
+            .add_systems(
+                Update,
+                (find_target, look_at_target, shoot).in_set(Gameplay),
+            );
         #[cfg(feature = "editor")]
         app.add_systems(Update, debug_gizmos.run_if(in_state(EditorState::Editor)))
             .editor_bundle(

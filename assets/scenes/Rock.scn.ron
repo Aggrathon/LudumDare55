@@ -1,7 +1,7 @@
 (
   resources: {},
   entities: {
-    60129542174: (
+    21474836489: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
@@ -21,28 +21,19 @@
             z: 1.0,
           ),
         ),
-        "bevy_core::name::Name": (
-          hash: 6940329078434776627,
-          name: "Tower",
-        ),
         "bevy_render::view::visibility::Visibility": Inherited,
         "space_prefab::save::ChildrenPrefab": ([
-          64424509816,
+          21474836491,
+          21474836490,
         ]),
-        "ludum_dare_55::tower::Targetter": (
-          range: 15.0,
-        ),
-        "ludum_dare_55::tower::Tower": (
-          projectile: Arrow,
-          cooldown: (
-            secs: 1,
-            nanos: 0,
-          ),
-          height: 5.0,
+        "ludum_dare_55::level::Randomize": (
+          scale: 0.3,
+          color: 0.0,
+          angle: 3.0,
         ),
       },
     ),
-    64424509564: (
+    21474836490: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
@@ -64,41 +55,14 @@
         ),
         "bevy_render::view::visibility::Visibility": Inherited,
         "space_prefab::component::AssetMesh": (
-          path: "models\\tower_roof.glb#Mesh0/Primitive1",
+          path: "models\\rock.glb#Mesh0/Primitive1",
         ),
         "space_prefab::component::AssetMaterial": (
-          path: "models\\tower_roof.glb#Material1",
+          path: "models\\rock.glb#Material1",
         ),
       },
     ),
-    64424509816: (
-      components: {
-        "bevy_transform::components::transform::Transform": (
-          translation: (
-            x: 0.0,
-            y: 2.5,
-            z: 0.0,
-          ),
-          rotation: (
-            x: 0.0,
-            y: 0.0,
-            z: 0.0,
-            w: 1.0,
-          ),
-          scale: (
-            x: 1.0,
-            y: 1.0,
-            z: 1.0,
-          ),
-        ),
-        "bevy_render::view::visibility::Visibility": Inherited,
-        "space_prefab::save::ChildrenPrefab": ([
-          73014444203,
-          64424509564,
-        ]),
-      },
-    ),
-    73014444203: (
+    21474836491: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
@@ -120,10 +84,10 @@
         ),
         "bevy_render::view::visibility::Visibility": Inherited,
         "space_prefab::component::AssetMesh": (
-          path: "models\\tower_roof.glb#Mesh0/Primitive0",
+          path: "models\\rock.glb#Mesh0/Primitive0",
         ),
         "space_prefab::component::AssetMaterial": (
-          path: "models\\tower_roof.glb#Material0",
+          path: "models\\rock.glb#Material0",
         ),
       },
     ),

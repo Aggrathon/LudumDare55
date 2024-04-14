@@ -21,7 +21,8 @@ pub enum Level {
     #[default]
     Unknown,
     MainMenu,
-    Level0,
+    Level01,
+    Level02,
     Reload,
     Next,
 }
@@ -30,8 +31,9 @@ impl Level {
     pub const fn next(&self) -> Self {
         match self {
             Level::Unknown => Level::MainMenu,
-            Level::MainMenu => Level::Level0,
-            Level::Level0 => Level::MainMenu,
+            Level::MainMenu => Level::Level01,
+            Level::Level01 => Level::Level02,
+            Level::Level02 => Level::MainMenu,
             Level::Reload => Level::MainMenu,
             Level::Next => Level::MainMenu,
         }
@@ -54,12 +56,17 @@ fn load_level(
         Level::Unknown => {}
         Level::MainMenu => {
             commands
-                .spawn(PrefabBundle::new("scenes/Level0.scn.ron"))
+                .spawn(PrefabBundle::new("scenes/Level0b.scn.ron"))
                 .insert(LevelLocal);
         }
-        Level::Level0 => {
+        Level::Level01 => {
             commands
-                .spawn(PrefabBundle::new("scenes/Level0.scn.ron"))
+                .spawn(PrefabBundle::new("scenes/Level1.scn.ron"))
+                .insert(LevelLocal);
+        }
+        Level::Level02 => {
+            commands
+                .spawn(PrefabBundle::new("scenes/Level2.scn.ron"))
                 .insert(LevelLocal);
         }
     };
@@ -115,6 +122,10 @@ impl GameStats {
     pub const MAX_CIRCLES: u8 = 5;
     pub const TIME_LIMIT: Duration = Duration::from_secs(180);
     pub const APPEASEMENT: Duration = Duration::from_secs(30);
+
+    pub fn time_limit(&self) -> Duration {
+        self.start_time + Self::TIME_LIMIT + Self::APPEASEMENT * self.upgrade_appease as u32
+    }
 }
 
 #[derive(SystemSet, Hash, Debug, PartialEq, Eq, Clone, Copy)]

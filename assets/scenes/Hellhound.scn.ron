@@ -1,7 +1,7 @@
 (
   resources: {},
   entities: {
-    8589934600: (
+    4294967305: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
@@ -21,22 +21,26 @@
             z: 1.0,
           ),
         ),
-        "bevy_render::view::visibility::Visibility": Visible,
+        "bevy_core::name::Name": (
+          hash: 6865446264386600074,
+          name: "Hellhound",
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
         "space_prefab::save::ChildrenPrefab": ([
-          8589934601,
+          4294967306,
         ]),
-        "ludum_dare_55::unit::Health": (40.0),
+        "ludum_dare_55::unit::Health": (50.0),
         "ludum_dare_55::unit::Unit": (
-          speed: 2.5,
+          speed: 5.0,
         ),
       },
     ),
-    8589934601: (
+    4294967306: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
             x: 0.0,
-            y: 0.6,
+            y: 0.4,
             z: 0.0,
           ),
           rotation: (
@@ -46,17 +50,21 @@
             w: 1.0,
           ),
           scale: (
-            x: 1.0,
-            y: 1.0,
-            z: 1.0,
+            x: 0.7,
+            y: 0.8,
+            z: 1.4,
           ),
+        ),
+        "bevy_core::name::Name": (
+          hash: 18083032402041422682,
+          name: "Cube",
         ),
         "bevy_render::view::visibility::Visibility": Inherited,
         "space_prefab::component::material::MaterialPrefab": (
           base_color: Rgba(
-            red: 1.0,
-            green: 0.1,
-            blue: 0.2,
+            red: 0.47058824,
+            green: 0.06666667,
+            blue: 0.6,
             alpha: 1.0,
           ),
           base_color_texture: "",
@@ -84,10 +92,7 @@
           parallax_mapping_method: Occlusion,
           max_parallax_layer_count: 16.0,
         ),
-        "space_prefab::component::shape::MeshPrimitive3dPrefab": Cylinder((
-          r: 0.35,
-          half_height: 0.6,
-        )),
+        "space_prefab::component::shape::MeshPrimitive3dPrefab": Cube(1.0),
       },
     ),
   },

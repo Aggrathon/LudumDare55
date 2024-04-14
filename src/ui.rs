@@ -60,7 +60,7 @@ fn main_menu(mut contexts: EguiContexts, mut next_level: ResMut<NextState<Level>
                         .rounding(Rounding::from(5.0))
                         .min_size(Vec2::new(300.0, 30.0));
                 if button.ui(ui).clicked() {
-                    next_level.set(Level::Level0);
+                    next_level.set(Level::Level01);
                 }
             });
         });
@@ -113,7 +113,7 @@ fn game_ui(
                 ui.add(
                     egui::ProgressBar::new(
                         (time.elapsed() - stats.start_time).as_secs_f32()
-                            / GameStats::TIME_LIMIT.as_secs_f32(),
+                            / (stats.time_limit() - stats.start_time).as_secs_f32(),
                     )
                     .text("Archdemon boredom")
                     .desired_width(width)
@@ -164,7 +164,7 @@ fn game_ui(
                     }
                 })
             });
-    } else if stats.start_time + GameStats::TIME_LIMIT < time.elapsed() {
+    } else if stats.time_limit() < time.elapsed() {
         egui::CentralPanel::default()
             .frame(Frame {
                 fill: Color32::from_black_alpha(128),
@@ -222,7 +222,6 @@ fn game_ui(
                         stats.souls_current -= stats.souls_next;
                         stats.souls_next += stats.souls_next / 2;
                         stats.upgrade_appease += 1;
-                        stats.start_time += GameStats::APPEASEMENT;
                     }
                 });
             });

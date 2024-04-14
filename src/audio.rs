@@ -9,6 +9,7 @@ use crate::level::Gameplay;
 pub enum AudioLibrary {
     #[default]
     Arrow,
+    Cannon,
 }
 
 impl AudioLibrary {
@@ -21,6 +22,7 @@ impl AudioLibrary {
                     "audio/shoot_bow_02.ogg"
                 }
             }
+            AudioLibrary::Cannon => "audio/cannon_01.ogg",
         }
     }
 }
@@ -31,6 +33,7 @@ pub struct PlayOnAwake {
     sound: AudioLibrary,
     volume: Volume,
     pitch: f32,
+    despawn: bool,
 }
 
 impl Default for PlayOnAwake {
@@ -39,6 +42,7 @@ impl Default for PlayOnAwake {
             sound: Default::default(),
             volume: Volume::new(0.5),
             pitch: 0.2,
+            despawn: false,
         }
     }
 }
@@ -49,9 +53,13 @@ fn play_on_awake(
     q: Query<(Entity, &PlayOnAwake)>,
 ) {
     for (entity, play) in q.iter() {
-        let settings = PlaybackSettings::ONCE
-            .with_speed(fastrand::f32() * play.pitch * 2.0 - play.pitch + 1.0)
-            .with_volume(play.volume);
+        let settings = (if play.despawn {
+            PlaybackSettings::DESPAWN
+        } else {
+            PlaybackSettings::ONCE
+        })
+        .with_speed(fastrand::f32() * play.pitch * 2.0 - play.pitch + 1.0)
+        .with_volume(play.volume);
         commands
             .get_entity(entity)
             .unwrap()
