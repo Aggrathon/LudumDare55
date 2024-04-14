@@ -10,10 +10,15 @@ fn despawn_local(mut commands: Commands, q: Query<Entity, With<Local>>) {
     }
 }
 
+#[derive(SystemSet, Hash, Debug, PartialEq, Eq, Clone, Copy)]
+pub struct Gameplay;
+
 pub struct StatePlugin;
 
 impl Plugin for StatePlugin {
     fn build(&self, app: &mut App) {
-        app.add_systems(OnExit(EditorState::Game), despawn_local);
+        app.add_systems(OnExit(EditorState::Game), despawn_local)
+            .configure_sets(Update, Gameplay.run_if(in_state(EditorState::Game)))
+            .configure_sets(PreUpdate, Gameplay.run_if(in_state(EditorState::Game)));
     }
 }

@@ -2,6 +2,8 @@ use bevy::math::cubic_splines::CubicCurve;
 use bevy::prelude::*;
 use space_editor::prelude::*;
 
+use crate::state::Gameplay;
+
 #[derive(Component, Clone)]
 pub struct Curve {
     curve: CubicCurve<Vec3>,
@@ -46,13 +48,12 @@ impl Default for Curve {
 pub struct Spline;
 
 /// Splines into Curves
-#[allow(unused)]
-pub fn convert_splines(
+fn convert_splines(
     mut commands: Commands,
-    splines: Query<(Entity, &Spline, &Children)>,
+    splines: Query<(Entity, &Children), With<Spline>>,
     nodes: Query<&GlobalTransform, With<Parent>>,
 ) {
-    for (entity, spline, children) in &splines {
+    for (entity, children) in &splines {
         if let Some(curve) = get_curve(children, &nodes) {
             let divs = curve.segments().len();
             let start = curve.position(0.0);
@@ -74,9 +75,8 @@ pub fn convert_splines(
     }
 }
 
-/// Draws Splines without conversion
 #[allow(unused)]
-pub fn draw_splines(
+fn debug_gizmos(
     splines: Query<(&Spline, &Children)>,
     nodes: Query<&GlobalTransform, With<Parent>>,
     mut gizmos: Gizmos,
@@ -117,13 +117,20 @@ fn get_curve(
 pub struct FollowCurve {
     curve: Entity,
     speed: f32,
-    pos: f32,
+    along: f32,
 }
 
 impl FollowCurve {
     pub fn new(curve: Entity, speed: f32) -> Self {
-        let pos = 0.0;
-        FollowCurve { curve, speed, pos }
+        FollowCurve {
+            curve,
+            speed,
+            along: 0.0,
+        }
+    }
+
+    pub fn distance(&self) -> f32 {
+        self.along
     }
 }
 
@@ -134,8 +141,8 @@ pub fn follow_curve(
 ) {
     for (mut follow, mut trans) in query.iter_mut() {
         if let Ok((_, curve)) = curves.get(follow.curve) {
-            let (pos, vec) = curve.position(follow.pos, follow.speed * time.delta_seconds());
-            follow.pos = pos;
+            let (pos, vec) = curve.position(follow.along, follow.speed * time.delta_seconds());
+            follow.along = pos;
             trans.translation = vec;
         }
     }
@@ -145,14 +152,11 @@ pub struct SplinePlugin;
 
 impl Plugin for SplinePlugin {
     fn build(&self, app: &mut bevy::prelude::App) {
-        app.add_systems(
-            PreUpdate,
-            (convert_splines).run_if(in_state(EditorState::Game)),
-        )
-        .add_systems(Update, (follow_curve).run_if(in_state(EditorState::Game)))
-        .editor_registry::<Spline>();
+        app.add_systems(PreUpdate, (convert_splines).in_set(Gameplay))
+            .add_systems(Update, (follow_curve).in_set(Gameplay))
+            .editor_registry::<Spline>();
         #[cfg(feature = "editor")]
-        app.add_systems(Update, draw_splines.run_if(in_state(EditorState::Editor)))
+        app.add_systems(Update, debug_gizmos.run_if(in_state(EditorState::Editor)))
             .editor_bundle(
                 "Level",
                 "Spline",

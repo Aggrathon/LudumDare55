@@ -3,6 +3,7 @@ use std::f32::consts::PI;
 use bevy::prelude::*;
 use space_editor::prelude::*;
 
+use crate::state::Gameplay;
 use crate::utils::smooth_damp_vec3;
 
 #[derive(Component, Reflect, Clone)]
@@ -63,7 +64,7 @@ pub struct CameraPlugin;
 impl Plugin for CameraPlugin {
     fn build(&self, app: &mut App) {
         app.editor_registry::<CameraTarget>()
-            .add_systems(PreUpdate, target_camera.run_if(in_state(EditorState::Game)));
+            .add_systems(Update, target_camera.in_set(Gameplay));
         #[cfg(feature = "editor")]
         app.editor_bundle(
             "Level",

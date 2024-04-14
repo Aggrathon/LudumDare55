@@ -1,7 +1,7 @@
 (
   resources: {},
   entities: {
-    8589934600: (
+    4294967304: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
@@ -22,45 +22,46 @@
           ),
         ),
         "bevy_core::name::Name": (
-          hash: 12860254565804767531,
-          name: "PlaceholderUnit",
+          hash: 13248923798149725766,
+          name: "Ar",
         ),
-        "bevy_render::view::visibility::Visibility": Visible,
+        "bevy_render::view::visibility::Visibility": Inherited,
         "space_prefab::save::ChildrenPrefab": ([
-          8589934601,
+          4294967305,
         ]),
-        "ludum_dare_55::unit::Health": (100.0),
-        "ludum_dare_55::unit::Unit": (
-          speed: 2.0,
+        "ludum_dare_55::projectile::HomingProjectile": (
+          damage_type: Physical,
+          damage: 20.0,
+          speed: 20.0,
         ),
       },
     ),
-    8589934601: (
+    4294967305: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
             x: 0.0,
-            y: 0.8,
+            y: 0.0,
             z: 0.0,
           ),
           rotation: (
-            x: 0.0,
+            x: 0.7071068,
             y: 0.0,
             z: 0.0,
-            w: 1.0,
+            w: 0.7071068,
           ),
           scale: (
             x: 1.0,
-            y: 1.0,
-            z: 1.0,
+            y: 0.9999873,
+            z: 0.9999873,
           ),
         ),
         "bevy_render::view::visibility::Visibility": Inherited,
         "space_prefab::component::material::MaterialPrefab": (
           base_color: Rgba(
-            red: 1.0,
-            green: 1.0,
-            blue: 1.0,
+            red: 0.8392157,
+            green: 0.7019608,
+            blue: 0.40784314,
             alpha: 1.0,
           ),
           base_color_texture: "",
@@ -89,8 +90,8 @@
           max_parallax_layer_count: 16.0,
         ),
         "space_prefab::component::shape::MeshPrimitive3dPrefab": Cylinder((
-          r: 0.4,
-          half_height: 0.8,
+          r: 0.05,
+          half_height: 0.2,
         )),
       },
     ),

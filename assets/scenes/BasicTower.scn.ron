@@ -1,46 +1,12 @@
 (
   resources: {},
   entities: {
-    8589934600: (
+    4294967304: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
             x: 0.0,
-            y: 0.0,
-            z: 0.0,
-          ),
-          rotation: (
-            x: 0.0,
-            y: 0.0,
-            z: 0.0,
-            w: 1.0,
-          ),
-          scale: (
-            x: 1.0,
             y: 1.0,
-            z: 1.0,
-          ),
-        ),
-        "bevy_core::name::Name": (
-          hash: 12860254565804767531,
-          name: "PlaceholderUnit",
-        ),
-        "bevy_render::view::visibility::Visibility": Visible,
-        "space_prefab::save::ChildrenPrefab": ([
-          8589934601,
-        ]),
-        "ludum_dare_55::unit::Health": (100.0),
-        "ludum_dare_55::unit::Unit": (
-          speed: 2.0,
-        ),
-      },
-    ),
-    8589934601: (
-      components: {
-        "bevy_transform::components::transform::Transform": (
-          translation: (
-            x: 0.0,
-            y: 0.8,
             z: 0.0,
           ),
           rotation: (
@@ -58,9 +24,9 @@
         "bevy_render::view::visibility::Visibility": Inherited,
         "space_prefab::component::material::MaterialPrefab": (
           base_color: Rgba(
-            red: 1.0,
-            green: 1.0,
-            blue: 1.0,
+            red: 0.34509805,
+            green: 0.34509805,
+            blue: 0.34509805,
             alpha: 1.0,
           ),
           base_color_texture: "",
@@ -89,9 +55,50 @@
           max_parallax_layer_count: 16.0,
         ),
         "space_prefab::component::shape::MeshPrimitive3dPrefab": Cylinder((
-          r: 0.4,
-          half_height: 0.8,
+          r: 1.0,
+          half_height: 1.0,
         )),
+      },
+    ),
+    4294967305: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_core::name::Name": (
+          hash: 6940329078434776627,
+          name: "Tower",
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          4294967304,
+        ]),
+        "ludum_dare_55::tower::Targetter": (
+          range: 10.0,
+        ),
+        "ludum_dare_55::tower::Tower": (
+          projectile: Arrow,
+          cooldown: (
+            secs: 1,
+            nanos: 0,
+          ),
+          height: 2.5,
+        ),
       },
     ),
   },

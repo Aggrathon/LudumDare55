@@ -1,8 +1,10 @@
+use std::time::Duration;
+
 use bevy::prelude::*;
 use space_editor::prelude::*;
 
 use crate::spline::{Curve, FollowCurve};
-use crate::state::Local;
+use crate::state::{Gameplay, Local};
 use crate::utils::get_random_from_iter;
 
 #[derive(Clone, Copy, Reflect, Default)]
@@ -50,7 +52,7 @@ pub fn instantiate_unit(
 
 #[derive(Component, Clone, Copy, Reflect)]
 #[reflect(Component, Default)]
-pub struct Health(f32);
+pub struct Health(pub f32);
 
 impl Default for Health {
     fn default() -> Self {
@@ -62,29 +64,37 @@ impl Default for Health {
 #[reflect(Component, Default)]
 pub struct Spawner {
     prefab: UnitPrefab,
-    cooldown: f32,
+    cooldown: Duration,
     #[reflect(ignore)]
-    next: f32,
+    next: Duration,
 }
 
 impl Default for Spawner {
     fn default() -> Self {
         Self {
             prefab: Default::default(),
-            cooldown: 1.0,
-            next: 0.0,
+            cooldown: Duration::from_secs(1),
+            next: Duration::from_secs(0),
         }
     }
 }
 
 pub fn tick_spawners(mut commands: Commands, mut spawners: Query<&mut Spawner>, time: Res<Time>) {
-    let time = time.elapsed_seconds();
+    let time = time.elapsed();
     for mut spawner in spawners.iter_mut() {
         if spawner.next < time {
             spawner.next = time + spawner.cooldown;
             commands
                 .spawn(PrefabBundle::new(spawner.prefab.path()))
                 .insert(Local);
+        }
+    }
+}
+
+pub fn die(mut commands: Commands, q: Query<(Entity, &Health), Changed<Health>>) {
+    for (entity, health) in q.iter() {
+        if health.0 <= 0.0 {
+            commands.get_entity(entity).unwrap().despawn_recursive();
         }
     }
 }
@@ -97,26 +107,22 @@ impl Plugin for UnitPlugin {
             .editor_registry::<Unit>()
             .editor_registry::<Spawner>()
             .register_type::<UnitPrefab>()
-            .add_systems(
-                PreUpdate,
-                instantiate_unit.run_if(in_state(EditorState::Game)),
-            )
-            .add_systems(Update, tick_spawners.run_if(in_state(EditorState::Game)));
-
+            .add_systems(PreUpdate, instantiate_unit.in_set(Gameplay))
+            .add_systems(Update, (die, tick_spawners).in_set(Gameplay));
         #[cfg(feature = "editor")]
         app.editor_bundle(
-            "Units",
-            "PlaceHolder",
+            "Prefab",
+            "Unit",
             (
                 SpatialBundle::default(),
                 Unit::default(),
                 Health::default(),
-                Name::new("Placeholder"),
+                Name::new("Unit"),
             ),
         );
         #[cfg(feature = "editor")]
         app.editor_bundle(
-            "Units",
+            "Level",
             "Spawner",
             (Spawner::default(), Name::new("Spawner")),
         );

@@ -5,6 +5,28 @@
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
+            x: -1.3944938,
+            y: 0.0,
+            z: 2.1449552,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+      },
+    ),
+    4294967305: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
             x: 3.8271394,
             y: 0.0,
             z: 3.2436216,
@@ -23,7 +45,7 @@
         ),
       },
     ),
-    4294967305: (
+    4294967306: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
@@ -70,11 +92,33 @@
         )),
         "space_prefab::component::camera::PlaymodeCamera": (),
         "space_prefab::save::ChildrenPrefab": ([
-          4294967316,
+          4294967318,
         ]),
       },
     ),
-    4294967306: (
+    4294967307: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 3.173365,
+            y: 0.0,
+            z: -1.7150301,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+      },
+    ),
+    4294967308: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
@@ -89,9 +133,56 @@
             w: 1.0,
           ),
           scale: (
-            x: 7.0,
-            y: 3.7,
-            z: 6.0,
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_core::name::Name": (
+          hash: 5021659524869238157,
+          name: "Camera Target",
+        ),
+        "ludum_dare_55::camera::CameraTarget": (
+          speed: 10.0,
+          smooth: 0.5,
+          angle: 60.0,
+          distance: 25.0,
+        ),
+      },
+    ),
+    4294967309: (
+      components: {
+        "bevy_core::name::Name": (
+          hash: 18363371438955828267,
+          name: "Spawner",
+        ),
+        "ludum_dare_55::unit::Spawner": (
+          prefab: PlaceHolder,
+          cooldown: (
+            secs: 1,
+            nanos: 0,
+          ),
+        ),
+      },
+    ),
+    4294967310: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 10.0,
+            y: 1.0,
+            z: 10.0,
           ),
         ),
         "bevy_core::name::Name": (
@@ -141,13 +232,13 @@
         )),
       },
     ),
-    4294967307: (
+    4294967311: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
-            x: -1.3944938,
+            x: 0.006576278,
             y: 0.0,
-            z: 2.1449552,
+            z: -4.280279,
           ),
           rotation: (
             x: 0.0,
@@ -161,37 +252,22 @@
             z: 1.0,
           ),
         ),
-      },
-    ),
-    4294967308: (
-      components: {
-        "bevy_transform::components::transform::Transform": (
-          translation: (
-            x: 3.173365,
-            y: 0.0,
-            z: -1.7150301,
-          ),
-          rotation: (
-            x: 0.0,
-            y: 0.0,
-            z: 0.0,
-            w: 1.0,
-          ),
-          scale: (
-            x: 1.0,
-            y: 1.0,
-            z: 1.0,
-          ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          4294967320,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\BasicTower.scn.ron",
         ),
       },
     ),
-    4294967309: (
+    4294967312: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
-            x: 0.0,
+            x: -3.038613,
             y: 0.0,
-            z: -1.7150301,
+            z: -1.4534454,
           ),
           rotation: (
             x: 0.0,
@@ -200,31 +276,9 @@
             w: 1.0,
           ),
           scale: (
-            x: 1.0,
+            x: 3.0,
             y: 1.0,
-            z: 1.0,
-          ),
-        ),
-      },
-    ),
-    4294967310: (
-      components: {
-        "bevy_transform::components::transform::Transform": (
-          translation: (
-            x: 0.0,
-            y: 0.0,
-            z: 0.0,
-          ),
-          rotation: (
-            x: 0.0,
-            y: 0.0,
-            z: 0.0,
-            w: 1.0,
-          ),
-          scale: (
-            x: 1.0,
-            y: 1.0,
-            z: 1.0,
+            z: 3.0,
           ),
         ),
         "bevy_core::name::Name": (
@@ -232,28 +286,38 @@
           name: "Curve",
         ),
         "space_prefab::save::ChildrenPrefab": ([
-          4294967307,
-          4294967309,
-          4294967308,
-          4294967313,
           4294967304,
+          4294967315,
+          4294967307,
+          4294967313,
+          4294967305,
         ]),
         "ludum_dare_55::spline::Spline": (),
       },
     ),
-    4294967311: (
+    4294967313: (
       components: {
-        "bevy_core::name::Name": (
-          hash: 18363371438955828267,
-          name: "Spawner",
-        ),
-        "ludum_dare_55::unit::Spawner": (
-          prefab: PlaceHolder,
-          cooldown: 1.0,
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 1.1861424,
+            y: 0.0,
+            z: 1.5968094,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
         ),
       },
     ),
-    4294967312: (
+    4294967314: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
@@ -293,17 +357,17 @@
         ),
         "space_prefab::component::camera::PlaymodeLight": (),
         "space_prefab::save::ChildrenPrefab": ([
-          17179869202,
+          21474836500,
         ]),
       },
     ),
-    4294967313: (
+    4294967315: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
-            x: 1.1861424,
+            x: 0.0,
             y: 0.0,
-            z: 1.5968094,
+            z: -1.7150301,
           ),
           rotation: (
             x: 0.0,
@@ -319,13 +383,13 @@
         ),
       },
     ),
-    4294967318: (
+    8589934619: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
-            x: 0.0,
+            x: 4.950312,
             y: 0.0,
-            z: 0.0,
+            z: 2.5717733,
           ),
           rotation: (
             x: 0.0,
@@ -339,15 +403,12 @@
             z: 1.0,
           ),
         ),
-        "bevy_core::name::Name": (
-          hash: 5021659524869238157,
-          name: "Camera Target",
-        ),
-        "ludum_dare_55::camera::CameraTarget": (
-          speed: 10.0,
-          smooth: 0.5,
-          angle: 60.0,
-          distance: 20.0,
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          4294967324,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\BasicTower.scn.ron",
         ),
       },
     ),
