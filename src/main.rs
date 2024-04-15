@@ -1,5 +1,6 @@
 mod audio;
 mod camera;
+mod fx;
 mod level;
 mod projectile;
 mod spline;
@@ -13,6 +14,7 @@ use space_editor::prelude::*;
 
 use audio::AudioPlugin;
 use camera::CameraPlugin;
+use fx::FxPlugin;
 use level::{Level, LevelPlugin};
 use projectile::ProjectilePlugin;
 use spline::SplinePlugin;
@@ -36,6 +38,7 @@ fn main() {
         ProjectilePlugin,
         AudioPlugin,
         UiPlugin,
+        FxPlugin,
     ));
     #[cfg(feature = "editor")]
     app.add_systems(Startup, space_editor::space_editor_ui::simple_editor_setup);

@@ -3,6 +3,7 @@ use std::time::Duration;
 use bevy::prelude::*;
 use space_editor::prelude::*;
 
+use crate::fx::{DespawnTimer, Spawnable};
 use crate::level::Gameplay;
 use crate::unit::Health;
 
@@ -19,9 +20,6 @@ impl Default for Damage {
         Damage::Physical(20.0)
     }
 }
-
-#[derive(Component, Clone, Copy)]
-pub struct DespawnTimer(Duration);
 
 #[derive(Component, Clone)]
 pub struct ProjectileTarget {
@@ -137,28 +135,28 @@ impl ProjectilePrefab {
     }
 }
 
-fn despawn_timer(mut commands: Commands, q: Query<(Entity, &DespawnTimer)>, time: Res<Time>) {
-    let time = time.elapsed();
-    for (e, t) in q.iter() {
-        if t.0 < time {
-            commands.get_entity(e).unwrap().despawn_recursive();
-        }
-    }
-}
-
 fn shoot_dumb(
     mut commands: Commands,
-    mut q: Query<(Entity, &DumbProjectile, &ProjectileTarget, &mut Transform)>,
+    mut q: Query<(
+        Entity,
+        &DumbProjectile,
+        &ProjectileTarget,
+        &mut Transform,
+        Option<&Spawnable>,
+    )>,
     mut targets: Query<(&GlobalTransform, &mut Health)>,
     time: Res<Time>,
 ) {
-    for (entity, proj, target, mut trans) in q.iter_mut() {
+    for (entity, proj, target, mut trans, spawnable) in q.iter_mut() {
         let delta = target.target + Vec3::Y * 0.3 - trans.translation;
         let speed = proj.speed * time.delta_seconds();
         let len2 = delta.length_squared();
         if len2 < speed * speed {
             deal_damage(trans.translation, proj.damage, target.entity, &mut targets);
             commands.get_entity(entity).unwrap().despawn_recursive();
+            if let Some(spawnable) = spawnable {
+                spawnable.spawn(trans.translation, &mut commands);
+            }
         } else {
             trans.translation += delta * (speed / len2.sqrt());
             trans.look_to(delta, Vec3::Y);
@@ -168,11 +166,17 @@ fn shoot_dumb(
 
 fn shoot_homing(
     mut commands: Commands,
-    mut q: Query<(Entity, &HomingProjectile, &ProjectileTarget, &mut Transform)>,
+    mut q: Query<(
+        Entity,
+        &HomingProjectile,
+        &ProjectileTarget,
+        &mut Transform,
+        Option<&Spawnable>,
+    )>,
     mut targets: Query<(&GlobalTransform, &mut Health)>,
     time: Res<Time>,
 ) {
-    for (entity, proj, target, mut trans) in q.iter_mut() {
+    for (entity, proj, target, mut trans, spawnable) in q.iter_mut() {
         if let Ok((gt, _)) = targets.get(target.entity) {
             let delta = gt.translation() + Vec3::Y * 0.3 - trans.translation;
             let speed = proj.speed * time.delta_seconds();
@@ -180,6 +184,9 @@ fn shoot_homing(
             if len2 < speed * speed {
                 deal_damage(trans.translation, proj.damage, target.entity, &mut targets);
                 commands.get_entity(entity).unwrap().despawn_recursive();
+                if let Some(spawnable) = spawnable {
+                    spawnable.spawn(trans.translation, &mut commands);
+                }
             } else {
                 trans.translation += delta * (speed / len2.sqrt());
                 trans.look_to(delta, Vec3::Y);
@@ -253,7 +260,7 @@ impl Plugin for ProjectilePlugin {
             .add_systems(PreUpdate, (setup_projectile, setup_ray).in_set(Gameplay))
             .add_systems(
                 Update,
-                (shoot_dumb, shoot_homing, shoot_ray, despawn_timer).in_set(Gameplay),
+                (shoot_dumb, shoot_homing, shoot_ray).in_set(Gameplay),
             );
         #[cfg(feature = "editor")]
         app.editor_bundle(

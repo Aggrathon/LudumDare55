@@ -1,7 +1,7 @@
 (
   resources: {},
   entities: {
-    25769804020: (
+    12884901897: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
@@ -63,7 +63,7 @@
         )),
       },
     ),
-    30064771400: (
+    12884901898: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
@@ -85,8 +85,8 @@
         ),
         "bevy_render::view::visibility::Visibility": Inherited,
         "space_prefab::save::ChildrenPrefab": ([
-          25769804020,
-          30064771509,
+          12884901897,
+          12884901899,
         ]),
         "ludum_dare_55::projectile::DumbProjectile": (
           damage: Explosive(40.0, 3.0),
@@ -96,10 +96,12 @@
           sound: Cannon,
           volume: (0.7),
           pitch: 0.2,
+          despawn: false,
         ),
+        "ludum_dare_55::fx::Spawnable": (Explosion),
       },
     ),
-    30064771509: (
+    12884901899: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (

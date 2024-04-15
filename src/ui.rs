@@ -142,7 +142,7 @@ fn game_ui(
                 ..default()
             })
             .show(contexts.ctx_mut(), |_| {});
-        egui::Window::new("You have broken though the defenders!")
+        egui::Window::new("You have broken though the defences!")
             .resizable(false)
             .anchor(Align2::CENTER_CENTER, Vec2::ZERO)
             .show(contexts.ctx_mut(), |ui| {

@@ -10,6 +10,8 @@ pub enum AudioLibrary {
     #[default]
     Arrow,
     Cannon,
+    Death,
+    Explosion,
 }
 
 impl AudioLibrary {
@@ -23,6 +25,14 @@ impl AudioLibrary {
                 }
             }
             AudioLibrary::Cannon => "audio/cannon_01.ogg",
+            AudioLibrary::Death => {
+                if fastrand::bool() {
+                    "audio/death_01.ogg"
+                } else {
+                    "audio/death_02.ogg"
+                }
+            }
+            AudioLibrary::Explosion => "audio/explosion_01.ogg",
         }
     }
 }

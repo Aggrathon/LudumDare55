@@ -4,6 +4,7 @@ use bevy::prelude::*;
 use enum_iterator::Sequence;
 use space_editor::prelude::*;
 
+use crate::fx::Spawnable;
 use crate::level::{GameStats, Gameplay, LevelLocal};
 use crate::spline::{Curve, FollowCurve, Width};
 use crate::utils::get_random_from_iter;
@@ -158,14 +159,17 @@ pub fn tick_spawners(
 
 pub fn die(
     mut commands: Commands,
-    q: Query<(Entity, &Health), Changed<Health>>,
+    q: Query<(Entity, &Health, &GlobalTransform, Option<&Spawnable>), Changed<Health>>,
     mut stats: ResMut<GameStats>,
 ) {
-    for (entity, health) in q.iter() {
+    for (entity, health, gt, spawnable) in q.iter() {
         if health.0 <= 0.0 {
             stats.souls_current += 1;
             stats.souls_total += 1;
             commands.get_entity(entity).unwrap().despawn_recursive();
+            if let Some(spawnable) = spawnable {
+                spawnable.spawn(gt.translation(), &mut commands);
+            }
         }
     }
 }

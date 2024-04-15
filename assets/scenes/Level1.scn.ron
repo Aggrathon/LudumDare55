@@ -1,13 +1,13 @@
 (
   resources: {},
   entities: {
-    47244640917: (
+    25769803785: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
-            x: 6.4336,
+            x: 1.0442034,
             y: 10.694272,
-            z: -27.274515,
+            z: 30.674837,
           ),
           rotation: (
             x: 0.0,
@@ -48,17 +48,17 @@
         )),
         "space_prefab::component::camera::PlaymodeCamera": (),
         "space_prefab::save::ChildrenPrefab": ([
-          77309411546,
+          42949673330,
         ]),
       },
     ),
-    51539607569: (
+    34359738897: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
             x: 0.0,
             y: 0.0,
-            z: 3.1032836,
+            z: 5.0799856,
           ),
           rotation: (
             x: 0.0,
@@ -80,13 +80,13 @@
           speed: 10.0,
           smooth: 0.5,
           angle: 60.0,
-          distance: 50.0,
+          distance: 52.0,
           orbit: 0.0,
           orbit_angle: 0.0,
         ),
       },
     ),
-    68719477154: (
+    42949673744: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
@@ -108,7 +108,7 @@
         ),
         "bevy_render::view::visibility::Visibility": Inherited,
         "space_prefab::save::ChildrenPrefab": ([
-          55834574937,
+          25769804303,
         ]),
         "space_prefab::load::PrefabLoader": (
           path: "scenes\\Level0.scn.ron",

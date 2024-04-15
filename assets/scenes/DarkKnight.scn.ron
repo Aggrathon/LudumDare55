@@ -1,7 +1,7 @@
 (
   resources: {},
   entities: {
-    8589934601: (
+    21474836490: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
@@ -23,15 +23,16 @@
         ),
         "bevy_render::view::visibility::Visibility": Visible,
         "space_prefab::save::ChildrenPrefab": ([
-          8589934602,
+          21474836491,
         ]),
-        "ludum_dare_55::unit::Health": (200.0),
+        "ludum_dare_55::unit::Health": (300.0),
         "ludum_dare_55::unit::Unit": (
-          speed: 1.5,
+          speed: 1.8,
         ),
+        "ludum_dare_55::fx::Spawnable": (Death),
       },
     ),
-    8589934602: (
+    21474836491: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (

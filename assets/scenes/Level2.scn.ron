@@ -1,36 +1,19 @@
 (
   resources: {},
   entities: {
-    47244640873: (
+    30064771738: (
       components: {
-        "bevy_transform::components::transform::Transform": (
-          translation: (
-            x: 19.915627,
-            y: 0.0,
-            z: 33.109337,
-          ),
-          rotation: (
-            x: 0.0,
-            y: 0.0,
-            z: 0.0,
-            w: 1.0,
-          ),
-          scale: (
-            x: 1.0,
-            y: 1.0,
-            z: 1.0,
-          ),
+        "bevy_core::name::Name": (
+          hash: 11014632631179983559,
+          name: "Spawner",
         ),
-        "bevy_render::view::visibility::Visibility": Inherited,
-        "space_prefab::save::ChildrenPrefab": ([
-          55834575002,
-        ]),
-        "space_prefab::load::PrefabLoader": (
-          path: "scenes\\BasicTower.scn.ron",
+        "ludum_dare_55::unit::Spawner": (
+          prefab: Imp,
+          number: 1,
         ),
       },
     ),
-    55834574878: (
+    38654705688: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
@@ -70,272 +53,11 @@
         ),
         "space_prefab::component::camera::PlaymodeLight": (),
         "space_prefab::save::ChildrenPrefab": ([
-          111669149741,
+          90194313351,
         ]),
       },
     ),
-    55834575111: (
-      components: {
-        "bevy_transform::components::transform::Transform": (
-          translation: (
-            x: -12.065669,
-            y: 0.0,
-            z: -16.385614,
-          ),
-          rotation: (
-            x: 0.0,
-            y: 0.0,
-            z: 0.0,
-            w: 1.0,
-          ),
-          scale: (
-            x: 1.0,
-            y: 1.0,
-            z: 1.0,
-          ),
-        ),
-        "bevy_render::view::visibility::Visibility": Inherited,
-        "space_prefab::save::ChildrenPrefab": ([
-          64424509722,
-        ]),
-        "space_prefab::load::PrefabLoader": (
-          path: "scenes\\CannonTower.scn.ron",
-        ),
-      },
-    ),
-    55834575177: (
-      components: {
-        "bevy_transform::components::transform::Transform": (
-          translation: (
-            x: -7.8013673,
-            y: 0.0,
-            z: 12.59573,
-          ),
-          rotation: (
-            x: 0.0,
-            y: 0.0,
-            z: 0.0,
-            w: 1.0,
-          ),
-          scale: (
-            x: 1.0,
-            y: 1.0,
-            z: 1.0,
-          ),
-        ),
-        "bevy_render::view::visibility::Visibility": Inherited,
-        "space_prefab::save::ChildrenPrefab": ([
-          51539608203,
-        ]),
-        "space_prefab::load::PrefabLoader": (
-          path: "scenes\\BasicTower.scn.ron",
-        ),
-      },
-    ),
-    60129542198: (
-      components: {
-        "bevy_transform::components::transform::Transform": (
-          translation: (
-            x: 6.225818,
-            y: 0.0,
-            z: 11.960422,
-          ),
-          rotation: (
-            x: 0.0,
-            y: 0.0,
-            z: 0.0,
-            w: 1.0,
-          ),
-          scale: (
-            x: 1.0,
-            y: 1.0,
-            z: 1.0,
-          ),
-        ),
-        "bevy_render::view::visibility::Visibility": Inherited,
-        "space_prefab::save::ChildrenPrefab": ([
-          55834575260,
-        ]),
-        "space_prefab::load::PrefabLoader": (
-          path: "scenes\\BasicTower.scn.ron",
-        ),
-      },
-    ),
-    60129542382: (
-      components: {
-        "bevy_transform::components::transform::Transform": (
-          translation: (
-            x: -16.765875,
-            y: 0.0,
-            z: -32.665127,
-          ),
-          rotation: (
-            x: 0.0,
-            y: 0.0,
-            z: 0.0,
-            w: 1.0,
-          ),
-          scale: (
-            x: 1.0,
-            y: 1.0,
-            z: 1.0,
-          ),
-        ),
-        "bevy_render::view::visibility::Visibility": Inherited,
-        "space_prefab::save::ChildrenPrefab": ([
-          60129542538,
-        ]),
-        "space_prefab::load::PrefabLoader": (
-          path: "scenes\\CannonTower.scn.ron",
-        ),
-      },
-    ),
-    60129542430: (
-      components: {
-        "bevy_transform::components::transform::Transform": (
-          translation: (
-            x: 0.0,
-            y: 0.0,
-            z: 0.0,
-          ),
-          rotation: (
-            x: 0.0,
-            y: 0.0,
-            z: 0.0,
-            w: 1.0,
-          ),
-          scale: (
-            x: 1.0,
-            y: 1.0,
-            z: 1.0,
-          ),
-        ),
-        "bevy_render::view::visibility::Visibility": Inherited,
-        "space_prefab::save::ChildrenPrefab": ([
-          68719477415,
-        ]),
-        "space_prefab::load::PrefabLoader": (
-          path: "scenes\\Terrain2.scn.ron",
-        ),
-      },
-    ),
-    60129542754: (
-      components: {
-        "bevy_transform::components::transform::Transform": (
-          translation: (
-            x: 32.151127,
-            y: -0.74575615,
-            z: 23.338455,
-          ),
-          rotation: (
-            x: 0.0,
-            y: -0.70142925,
-            z: 0.0,
-            w: 0.7127391,
-          ),
-          scale: (
-            x: 1.0000014,
-            y: 1.0,
-            z: 1.0000014,
-          ),
-        ),
-        "bevy_render::view::visibility::Visibility": Inherited,
-        "space_prefab::save::ChildrenPrefab": ([
-          60129542327,
-        ]),
-        "space_prefab::load::PrefabLoader": (
-          path: "scenes\\Barricade.scn.ron",
-        ),
-      },
-    ),
-    64424509637: (
-      components: {
-        "bevy_transform::components::transform::Transform": (
-          translation: (
-            x: 1.4289508,
-            y: 0.0,
-            z: -7.323101,
-          ),
-          rotation: (
-            x: 0.0,
-            y: 0.0,
-            z: 0.0,
-            w: 1.0,
-          ),
-          scale: (
-            x: 1.0,
-            y: 1.0,
-            z: 1.0,
-          ),
-        ),
-        "bevy_render::view::visibility::Visibility": Inherited,
-        "space_prefab::save::ChildrenPrefab": ([
-          55834575322,
-        ]),
-        "space_prefab::load::PrefabLoader": (
-          path: "scenes\\CannonTower.scn.ron",
-        ),
-      },
-    ),
-    64424509724: (
-      components: {
-        "bevy_transform::components::transform::Transform": (
-          translation: (
-            x: -26.330553,
-            y: 0.0,
-            z: 15.415757,
-          ),
-          rotation: (
-            x: 0.0,
-            y: 0.0,
-            z: 0.0,
-            w: 1.0,
-          ),
-          scale: (
-            x: 1.0,
-            y: 1.0,
-            z: 1.0,
-          ),
-        ),
-        "bevy_render::view::visibility::Visibility": Inherited,
-        "space_prefab::save::ChildrenPrefab": ([
-          68719477092,
-        ]),
-        "space_prefab::load::PrefabLoader": (
-          path: "scenes\\BasicTower.scn.ron",
-        ),
-      },
-    ),
-    64424509774: (
-      components: {
-        "bevy_transform::components::transform::Transform": (
-          translation: (
-            x: 28.922756,
-            y: 0.0,
-            z: -6.2633395,
-          ),
-          rotation: (
-            x: 0.0,
-            y: 0.0,
-            z: 0.0,
-            w: 1.0,
-          ),
-          scale: (
-            x: 1.0,
-            y: 1.0,
-            z: 1.0,
-          ),
-        ),
-        "bevy_render::view::visibility::Visibility": Inherited,
-        "space_prefab::save::ChildrenPrefab": ([
-          55834575281,
-        ]),
-        "space_prefab::load::PrefabLoader": (
-          path: "scenes\\CannonTower.scn.ron",
-        ),
-      },
-    ),
-    68719476777: (
+    38654705884: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
@@ -357,14 +79,292 @@
         ),
         "bevy_render::view::visibility::Visibility": Inherited,
         "space_prefab::save::ChildrenPrefab": ([
-          55834575074,
+          42949673114,
         ]),
         "space_prefab::load::PrefabLoader": (
           path: "scenes\\BasicTower.scn.ron",
         ),
       },
     ),
-    68719476907: (
+    38654705890: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 1.4289508,
+            y: 0.0,
+            z: -7.323101,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          47244640375,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\CannonTower.scn.ron",
+        ),
+      },
+    ),
+    38654706045: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -7.8013673,
+            y: 0.0,
+            z: 12.59573,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          47244640331,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\BasicTower.scn.ron",
+        ),
+      },
+    ),
+    42949673287: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -16.765875,
+            y: 0.0,
+            z: -32.665127,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          42949673308,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\CannonTower.scn.ron",
+        ),
+      },
+    ),
+    47244640370: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 32.151127,
+            y: -0.74575615,
+            z: 23.338455,
+          ),
+          rotation: (
+            x: 0.0,
+            y: -0.70142925,
+            z: 0.0,
+            w: 0.7127391,
+          ),
+          scale: (
+            x: 1.0000014,
+            y: 1.0,
+            z: 1.0000014,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          42949673574,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Barricade.scn.ron",
+        ),
+      },
+    ),
+    47244640492: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 19.915627,
+            y: 0.0,
+            z: 33.109337,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          42949673658,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\BasicTower.scn.ron",
+        ),
+      },
+    ),
+    47244640523: (
+      components: {
+        "bevy_core::name::Name": (
+          hash: 11014632631179983559,
+          name: "Spawner",
+        ),
+        "ludum_dare_55::unit::Spawner": (
+          prefab: Imp,
+          number: 1,
+        ),
+      },
+    ),
+    47244640602: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 28.922756,
+            y: 0.0,
+            z: -6.2633395,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          51539607946,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\CannonTower.scn.ron",
+        ),
+      },
+    ),
+    47244640888: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -6.8839865,
+            y: 0.0,
+            z: 7.380161,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_core::name::Name": (
+          hash: 8587728178085643506,
+          name: "Camera Target",
+        ),
+        "ludum_dare_55::camera::CameraTarget": (
+          speed: 10.0,
+          smooth: 0.5,
+          angle: 55.0,
+          distance: 80.0,
+          orbit: 0.0,
+          orbit_angle: 1.6,
+        ),
+      },
+    ),
+    47244640942: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          60129542602,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\Terrain2.scn.ron",
+        ),
+      },
+    ),
+    51539608034: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: -26.330553,
+            y: 0.0,
+            z: 15.415757,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          42949673282,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\BasicTower.scn.ron",
+        ),
+      },
+    ),
+    51539608040: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
@@ -411,17 +411,17 @@
         )),
         "space_prefab::component::camera::PlaymodeCamera": (),
         "space_prefab::save::ChildrenPrefab": ([
-          60129542268,
+          38654705859,
         ]),
       },
     ),
-    68719477400: (
+    55834575631: (
       components: {
         "bevy_transform::components::transform::Transform": (
           translation: (
-            x: -5.1306357,
+            x: -10.170825,
             y: 0.0,
-            z: 7.380161,
+            z: -17.70178,
           ),
           rotation: (
             x: 0.0,
@@ -435,17 +435,41 @@
             z: 1.0,
           ),
         ),
-        "bevy_core::name::Name": (
-          hash: 8587728178085643506,
-          name: "Camera Target",
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          38654706323,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\CannonTower.scn.ron",
         ),
-        "ludum_dare_55::camera::CameraTarget": (
-          speed: 10.0,
-          smooth: 0.5,
-          angle: 55.0,
-          distance: 80.0,
-          orbit: 0.0,
-          orbit_angle: 1.6,
+      },
+    ),
+    60129542523: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 6.225818,
+            y: 0.0,
+            z: 11.960422,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          47244640848,
+        ]),
+        "space_prefab::load::PrefabLoader": (
+          path: "scenes\\BasicTower.scn.ron",
         ),
       },
     ),
