@@ -29,32 +29,30 @@ fn main_menu(mut contexts: EguiContexts, mut next_level: ResMut<NextState<Level>
         .show_separator_line(false)
         .show(contexts.ctx_mut(), |ui| {
             ui.with_layout(Layout::top_down(egui::Align::Center), |ui| {
-                ui.add_space(5.0);
+                ui.add_space(10.0);
                 ui.label(
                     RichText::new("The archdemon has finally decided to invade earth!")
                         .size(28.0)
                         .color(Color32::BLACK),
                 );
                 ui.label(
-                    RichText::new("But actually managing an invasion is below their stature.")
+                    RichText::new("But actually managing an invasion is far below their stature.")
+                        .size(28.0)
+                        .color(Color32::BLACK),
+                );
+                ui.label(
+                    RichText::new("So, you have been assigned to oversee the summoning circles.")
                         .size(28.0)
                         .color(Color32::BLACK),
                 );
                 ui.label(
                     RichText::new(
-                        "So you have been assigned the task of overseeing the summoning circles.",
+                        "You even get a \"finders fee\" for every soul send back to hell!",
                     )
                     .size(28.0)
                     .color(Color32::BLACK),
                 );
-                ui.label(
-                    RichText::new(
-                        "You even get a \"finders fee\" for every soul sent back to hell!",
-                    )
-                    .size(28.0)
-                    .color(Color32::BLACK),
-                );
-                ui.add_space(5.0);
+                ui.add_space(10.0);
                 let button =
                     egui::Button::new(RichText::new("Play").size(40.0).color(Color32::BLACK))
                         .rounding(Rounding::from(5.0))
@@ -129,7 +127,7 @@ fn game_ui(
                     egui::ProgressBar::new(
                         stats.defender_morale as f32 / GameStats::MAX_MORALE as f32,
                     )
-                    .text("Defenders morale")
+                    .text("Defenders' morale")
                     .desired_width(width)
                     .fill(Color32::from_rgb(180, 0, 0)),
                 );
@@ -171,7 +169,7 @@ fn game_ui(
                 ..default()
             })
             .show(contexts.ctx_mut(), |_| {});
-        egui::Window::new("The archdemon tore your souls apart!")
+        egui::Window::new("The archdemon got bored and ate your soul!")
             .anchor(Align2::CENTER_CENTER, Vec2::ZERO)
             .resizable(false)
             .show(contexts.ctx_mut(), |ui| {
@@ -212,7 +210,7 @@ fn game_ui(
                         stats.upgrade_speed += 1;
                     }
                     if stats.upgrade_level + 1 < cardinality::<UnitPrefab>() as u8
-                        && ui.button("New type of demons").clicked()
+                        && ui.button("New type of demon").clicked()
                     {
                         stats.souls_current -= stats.souls_next;
                         stats.souls_next += stats.souls_next / 2;
