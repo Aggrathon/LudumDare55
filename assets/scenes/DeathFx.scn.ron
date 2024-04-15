@@ -1,0 +1,15 @@
+(
+  resources: {},
+  entities: {
+    4294967305: (
+      components: {
+        "ludum_dare_55::audio::PlayOnAwake": (
+          sound: Death,
+          volume: (0.5),
+          pitch: 0.2,
+          despawn: true,
+        ),
+      },
+    ),
+  },
+)

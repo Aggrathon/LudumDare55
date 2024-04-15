@@ -1,0 +1,58 @@
+(
+  resources: {},
+  entities: {
+    8589934601: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.5,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_core::name::Name": (
+          hash: 11330206474004222672,
+          name: "Point light",
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_shared::LightAreaToggle": (false),
+        "bevy_pbr::light::PointLight": (
+          color: Rgba(
+            red: 0.92941177,
+            green: 0.7372549,
+            blue: 0.4627451,
+            alpha: 1.0,
+          ),
+          intensity: 10000000.0,
+          range: 10.0,
+          radius: 1.0,
+          shadows_enabled: true,
+          shadow_depth_bias: 0.02,
+          shadow_normal_bias: 0.6,
+        ),
+        "space_prefab::component::camera::PlaymodeLight": (),
+        "space_prefab::save::ChildrenPrefab": ([
+          4294967306,
+          8589934602,
+        ]),
+        "ludum_dare_55::audio::PlayOnAwake": (
+          sound: Explosion,
+          volume: (0.5),
+          pitch: 0.2,
+          despawn: true,
+        ),
+      },
+    ),
+  },
+)

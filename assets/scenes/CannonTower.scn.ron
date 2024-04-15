@@ -1,0 +1,133 @@
+(
+  resources: {},
+  entities: {
+    12884902007: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::component::AssetMesh": (
+          path: "models\\tower_cannon.glb#Mesh0/Primitive0",
+        ),
+        "space_prefab::component::AssetMaterial": (
+          path: "models\\tower_cannon.glb#Material0",
+        ),
+      },
+    ),
+    12884902121: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 2.5,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902007,
+          17179869721,
+        ]),
+        "ludum_dare_55::tower::LookAtTarget": (),
+      },
+    ),
+    17179869712: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_core::name::Name": (
+          hash: 1748709251715936922,
+          name: "Cannon Tower",
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::save::ChildrenPrefab": ([
+          12884902121,
+        ]),
+        "ludum_dare_55::tower::Targetter": (
+          range: 15.0,
+        ),
+        "ludum_dare_55::tower::LookAtTarget": (),
+        "ludum_dare_55::tower::Tower": (
+          projectile: Bomb,
+          cooldown: (
+            secs: 3,
+            nanos: 0,
+          ),
+          height: 6.0,
+        ),
+      },
+    ),
+    17179869721: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            w: 1.0,
+          ),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "space_prefab::component::AssetMesh": (
+          path: "models\\tower_cannon.glb#Mesh0/Primitive1",
+        ),
+        "space_prefab::component::AssetMaterial": (
+          path: "models\\tower_cannon.glb#Material1",
+        ),
+      },
+    ),
+  },
+)
