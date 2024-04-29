@@ -13,8 +13,8 @@ Remember to update the names in the file `html/index.html`.
 
 1. Do the above 
 2. Switch to the `gh-pages` branch (created with `git switch --orphan gh-pages`)
-3. Get the index: `git checkout master -- html/index.html; cp html/index.html .`
-3. Get the assets: `git checkout master -- assets`
+3. Get the index: `git checkout master -- html/index.html; cp html/index.html .; rm html/index.html`
+3. Get the assets: `git checkout master -- assets .gitignore`
 5. Get the WASM files: `wasm-bindgen --out-dir . --target web .\target\wasm32-unknown-unknown\wasm-release\ludum_dare_55.wasm`
 5. Test locally: `python -m http.server`
 6. Commit and push
